@@ -23,10 +23,7 @@
 
 ### 🧠 Languages and Tools
 <p align="left">
-<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,fastapi,docker,git,linux,aws,cpp,js,postgres,sqlite,pandas,numpy,matplotlib,opencv,anaconda,jupyter,keras,scikitlearn" />
-<img src="https://cdn.simpleicons.org/huggingface" height="40" width="40"/>
-<img src="https://cdn.simpleicons.org/langchain/1C3C3C" height="40" width="40"/>
-<img src="https://cdn.simpleicons.org/ollama" height="40" width="40"/>
+<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,fastapi,docker,git,linux,aws,cpp,js,postgres,sqlite,pandas,numpy,matplotlib,opencv,anaconda,jupyter,keras,scikitlearn" /><img src="https://cdn.simpleicons.org/huggingface" height="40" width="40"/><img src="https://cdn.simpleicons.org/langchain/1C3C3C" height="40" width="40"/><img src="https://cdn.simpleicons.org/ollama" height="40" width="40"/>
 </p>
 
 ---
