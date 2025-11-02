@@ -1,6 +1,5 @@
 <h1 align="center">Hi 👋, I'm Mohamed Elrefaay</h1>
 <h3 align="center">🤖 AI Developer | LLM Engineer | Automation Enthusiast</h3>
-![Profile views](https://komarev.com/ghpvc/?username=MohamedEl-Refa3y&label=Profile%20views&color=0e75b6&style=flat)
 
 ---
 
