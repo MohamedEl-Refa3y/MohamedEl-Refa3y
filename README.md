@@ -50,7 +50,8 @@
 - 🧠 **Neural Network Optimizer** – Automated model tuner for performance benchmarking.
 
 ---
-<img src="https://raw.githubusercontent.com/MohamedEl-Refa3y/output/snake.svg" alt="Snake animation" />
+<img src="https://raw.githubusercontent.com/MohamedEl-Refa3y/MohamedEl-Refa3y/output/snake.svg" alt="Snake animation" />
+
 
 ###
 ### ⚡ Fun Fact
