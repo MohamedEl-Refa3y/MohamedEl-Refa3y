@@ -5,7 +5,7 @@
 
 ### 🚀 About Me
 - 🔭 Currently working on **Driven LLM Automation & RAG systems**
-- 🌱 Learning **Mathematics for ML/DL** and **Cloud AI deployment**
+- 🌱 Learning **Mathematics for ML/DL**
 - 👯 Open to collaborate on **private or enterprise AI projects**
 - 💬 Ask me about **RAG systems, Agentic workflows, and ML deployment**
 - 📫 Reach me at **mohamedelrefaai45@gmail.com**
