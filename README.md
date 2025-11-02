@@ -1,5 +1,3 @@
-[![Mohamed's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=MohamedEl-Refa3y&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
-![Profile views](https://komarev.com/ghpvc/?username=MohamedEl-Refa3y&label=Profile%20views&color=0e75b6&style=flat)
 <h1 align="center">Hi 👋, I'm Mohamed Elrefaay</h1>
 <h3 align="center">🤖 AI Developer | LLM Engineer | Automation Enthusiast</h3>
 
@@ -19,6 +17,8 @@
   <a href="https://github.com/MohamedEl-Refa3y" target="blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
   <a href="https://www.linkedin.com/in/mohammed-el-refaay-0b1b6b268" target="blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="mailto:mohamedelrefaai45@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>
+  ![Profile views](https://komarev.com/ghpvc/?username=MohamedEl-Refa3y&label=Profile%20views&color=0e75b6&style=flat)
+
 </p>
 
 ---
