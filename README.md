@@ -43,7 +43,6 @@
 </p>
 
 ---
-<img src="https://raw.githubusercontent.com/MohamedEl-Refa3y/MohamedEl-Refa3y/output/snake.svg" alt="Snake animation" />
 
 ### 🧩 Featured Projects
 - 🤖 **AI Chatbot with RAG** – Context-aware conversational assistant using LangChain & Llama.  
@@ -51,6 +50,8 @@
 - 🧠 **Neural Network Optimizer** – Automated model tuner for performance benchmarking.
 
 ---
+<img src="https://raw.githubusercontent.com/MohamedEl-Refa3y/MohamedEl-Refa3y/output/snake.svg" alt="Snake animation" />
 
+###
 ### ⚡ Fun Fact
 I love turning complex AI workflows into automated, deployable solutions that actually work in production 🚀  
