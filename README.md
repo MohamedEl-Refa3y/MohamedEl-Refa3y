@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Mohamed Elrefaay</h1>
-<h3 align="center">🤖 AI Developer | LLM Engineer | Automation Enthusiast</h3>
+<h3 align="center">🤖 AI Developer | Automation Enthusiast</h3>
 
 ---
 
