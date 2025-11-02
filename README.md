@@ -15,7 +15,7 @@
 ### 🌐 Connect with Me
 <p align="left">
   <a href="https://github.com/MohamedEl-Refa3y" target="blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-  <a href="https://linkedin.com/in/your-link" target="blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://www.linkedin.com/in/mohammed-el-refaay-0b1b6b268" target="blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="mailto:mohamedelrefaai45@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>
 </p>
 
@@ -43,6 +43,7 @@
 </p>
 
 ---
+<img src="https://raw.githubusercontent.com/MohamedEl-Refa3y/MohamedEl-Refa3y/output/snake.svg" alt="Snake animation" />
 
 ### 🧩 Featured Projects
 - 🤖 **AI Chatbot with RAG** – Context-aware conversational assistant using LangChain & Llama.  
