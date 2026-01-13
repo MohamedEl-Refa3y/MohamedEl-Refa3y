@@ -22,7 +22,7 @@
     <text x="35" y="18" fill="#ffffff" 
           font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" 
           font-size="14" font-weight="600">
-        0 contributions in 2024-2026
+        244 contributions in 2024-2026
     </text>
     
     <!-- Month labels -->
@@ -268,7 +268,14 @@
         <rect x="48" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="61" y="81" width="10" height="10" 
-              rx="2" fill="#161b22" class="contrib-cell"/>
+              rx="2" fill="#39d353" class="contrib-cell"/>
+        <circle cx="66" cy="86" r="4.0" fill="#ffff00" 
+                opacity="0.8" filter="url(#glow)" class="contrib-dot">
+            <animate attributeName="opacity" begin="27.00s" dur="0.15s" 
+                     from="0.8" to="0" fill="freeze"/>
+            <animate attributeName="r" begin="27.00s" dur="0.15s" 
+                     from="4.0" to="0" fill="freeze"/>
+        </circle>
         <rect x="74" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="87" y="81" width="10" height="10" 
@@ -478,7 +485,14 @@
         <rect x="35" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="48" y="107" width="10" height="10" 
-              rx="2" fill="#161b22" class="contrib-cell"/>
+              rx="2" fill="#39d353" class="contrib-cell"/>
+        <circle cx="53" cy="112" r="4.0" fill="#ffff00" 
+                opacity="0.8" filter="url(#glow)" class="contrib-dot">
+            <animate attributeName="opacity" begin="53.25s" dur="0.15s" 
+                     from="0.8" to="0" fill="freeze"/>
+            <animate attributeName="r" begin="53.25s" dur="0.15s" 
+                     from="4.0" to="0" fill="freeze"/>
+        </circle>
         <rect x="61" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="74" y="107" width="10" height="10" 
