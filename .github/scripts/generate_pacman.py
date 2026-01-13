@@ -10,6 +10,7 @@ Pac-Man moves horizontally through rows in a serpentine pattern.
 import os
 import json
 import requests
+import re
 from datetime import datetime, timedelta
 from typing import List, Dict, Tuple
 import math
@@ -50,11 +51,13 @@ MONTH_TEXT_COLOR = "#8b949e"
 ANIMATION_DURATION_PER_CELL = 0.25  # seconds per cell (slower = higher value)
 
 
-def fetch_contributions() -> Dict:
+def fetch_contributions_graphql() -> Dict:
     """Fetch all contribution data from GitHub GraphQL API."""
     if not GITHUB_TOKEN:
-        print("Warning: No GITHUB_TOKEN found. Using mock data.")
-        return generate_mock_data()
+        print("[WARN] No GITHUB_TOKEN found. Cannot fetch contributions via GraphQL.")
+        return None
+    
+    print(f"[API] Using GraphQL API with token: {GITHUB_TOKEN[:8]}...")
     
     # First, get the contribution years
     user_query = """
@@ -80,16 +83,22 @@ def fetch_contributions() -> Dict:
     )
     
     if response.status_code != 200:
-        print(f"Error fetching user data: {response.status_code}")
-        return generate_mock_data()
+        print(f"[ERROR] GraphQL request failed: {response.status_code}")
+        print(f"[ERROR] Response: {response.text[:500]}")
+        return None
     
     user_data = response.json()
     
     if 'errors' in user_data:
-        print(f"GraphQL errors: {user_data['errors']}")
-        return generate_mock_data()
+        print(f"[ERROR] GraphQL errors: {user_data['errors']}")
+        return None
+    
+    if not user_data.get('data', {}).get('user'):
+        print(f"[ERROR] No user data returned. Response: {user_data}")
+        return None
     
     years = user_data['data']['user']['contributionsCollection']['contributionYears']
+    print(f"[INFO] Found contribution years: {years}")
     
     # Fetch contributions for each year
     all_contributions = []
@@ -132,8 +141,11 @@ def fetch_contributions() -> Dict:
         
         if response.status_code == 200:
             data = response.json()
-            if 'data' in data and data['data']['user']:
+            if 'data' in data and data['data'].get('user'):
                 calendar = data['data']['user']['contributionsCollection']['contributionCalendar']
+                year_total = calendar['totalContributions']
+                print(f"[INFO] Year {year}: {year_total} contributions")
+                
                 for week in calendar['weeks']:
                     for day in week['contributionDays']:
                         level = contribution_level_to_int(day['contributionLevel'])
@@ -143,7 +155,24 @@ def fetch_contributions() -> Dict:
                             'level': level
                         })
     
-    return {'contributions': all_contributions, 'years': years}
+    if all_contributions:
+        return {'contributions': all_contributions, 'years': years}
+    return None
+
+
+def fetch_contributions() -> Dict:
+    """Fetch contributions - GraphQL API only (requires PAT_TOKEN for private profiles)."""
+    result = fetch_contributions_graphql()
+    if result and result['contributions']:
+        total = sum(c['count'] for c in result['contributions'])
+        active = sum(1 for c in result['contributions'] if c['count'] > 0)
+        print(f"[OK] Got {total} contributions, {active} active days from GraphQL API")
+        return result
+    
+    # Fall back to mock data
+    print("[WARN] Could not fetch real contributions. Using mock data.")
+    print("[HINT] Make sure PAT_TOKEN secret is set with 'read:user' permission")
+    return generate_mock_data()
 
 
 def contribution_level_to_int(level_str: str) -> int:
@@ -202,7 +231,7 @@ def generate_mock_data() -> Dict:
 
 def build_calendar_grid(contributions: List[Dict]) -> List[List[Dict]]:
     """
-    Build a 7 rows × 53 columns grid matching GitHub's contribution calendar.
+    Build a 7 rows x 53 columns grid matching GitHub's contribution calendar.
     Returns grid[day_of_week][week_index] = contribution data
     """
     if not contributions:
@@ -300,6 +329,7 @@ def generate_svg(contributions_data: Dict) -> str:
     # Build HORIZONTAL serpentine path for Pac-Man
     # Move through each ROW, alternating direction
     path_points = []
+    
     for row in range(DAYS_IN_WEEK):
         row_cells = [c for c in cells if c['row'] == row]
         if row % 2 == 0:
@@ -317,7 +347,10 @@ def generate_svg(contributions_data: Dict) -> str:
     active_days = sum(1 for c in contributions if c['count'] > 0)
     
     # Animation duration - SLOW (0.25 seconds per cell)
-    animation_duration = len(path_points) * ANIMATION_DURATION_PER_CELL
+    total_cells = len(path_points)
+    forward_duration = total_cells * ANIMATION_DURATION_PER_CELL
+    # Total duration = forward + return
+    total_duration = forward_duration * 2
     
     # Get month labels
     month_labels = get_month_labels(weeks_data)
@@ -341,6 +374,30 @@ def generate_svg(contributions_data: Dict) -> str:
                 <feMergeNode in="SourceGraphic"/>
             </feMerge>
         </filter>
+        
+        <!-- Pac-Man facing right -->
+        <g id="pacmanRight">
+            <circle cx="0" cy="0" r="6" fill="url(#pacmanGradient)"/>
+            <path fill="{BG_COLOR}">
+                <animate attributeName="d" dur="0.2s" repeatCount="indefinite"
+                    values="M 0,0 L 6,2 L 6,-2 Z;
+                            M 0,0 L 6,0.5 L 6,-0.5 Z;
+                            M 0,0 L 6,2 L 6,-2 Z"/>
+            </path>
+            <circle cx="1" cy="-3" r="1" fill="{BG_COLOR}"/>
+        </g>
+        
+        <!-- Pac-Man facing left (mirrored) -->
+        <g id="pacmanLeft">
+            <circle cx="0" cy="0" r="6" fill="url(#pacmanGradient)"/>
+            <path fill="{BG_COLOR}">
+                <animate attributeName="d" dur="0.2s" repeatCount="indefinite"
+                    values="M 0,0 L -6,2 L -6,-2 Z;
+                            M 0,0 L -6,0.5 L -6,-0.5 Z;
+                            M 0,0 L -6,2 L -6,-2 Z"/>
+            </path>
+            <circle cx="-1" cy="-3" r="1" fill="{BG_COLOR}"/>
+        </g>
     </defs>
     
     <!-- Title -->
@@ -361,7 +418,7 @@ def generate_svg(contributions_data: Dict) -> str:
     svg += '''
     </g>
     
-    <!-- Day labels (Sun, Mon, Tue, Wed, Thu, Fri, Sat) -->
+    <!-- Day labels (Mon, Wed, Fri) -->
     <g fill="''' + TEXT_COLOR + '''" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9">
         <text x="''' + str(MARGIN_LEFT - 25) + '''" y="''' + str(MARGIN_TOP + 1 * (CELL_SIZE + CELL_GAP) + 7) + '''">Mon</text>
         <text x="''' + str(MARGIN_LEFT - 25) + '''" y="''' + str(MARGIN_TOP + 3 * (CELL_SIZE + CELL_GAP) + 7) + '''">Wed</text>
@@ -381,7 +438,7 @@ def generate_svg(contributions_data: Dict) -> str:
         cell_x = cell['x']
         cell_y = cell['y']
         
-        # Calculate when Pac-Man reaches this cell
+        # Calculate when Pac-Man reaches this cell (forward pass)
         delay = idx * ANIMATION_DURATION_PER_CELL
         
         # Base cell (always visible)
@@ -404,40 +461,73 @@ def generate_svg(contributions_data: Dict) -> str:
     svg += '''
     </g>'''
     
-    # Build the motion path for Pac-Man (horizontal serpentine)
+    # Build separate animations for Pac-Man facing right and left
     if path_points:
-        path_d = f"M {path_points[0][0]},{path_points[0][1]}"
-        for px, py, _ in path_points[1:]:
-            path_d += f" L {px},{py}"
-        # Return path (reverse to create loop)
-        for px, py, _ in reversed(path_points[:-1]):
-            path_d += f" L {px},{py}"
+        # Calculate directions for each point
+        directions = []
+        for i, (px, py, cell) in enumerate(path_points):
+            row = cell['row']
+            # Even rows go right (direction = 1), odd rows go left (direction = -1)
+            directions.append(1 if row % 2 == 0 else -1)
+        
+        # For return path, reverse directions
+        return_directions = [-d for d in reversed(directions)]
+        all_directions = directions + return_directions
+        
+        # Build X and Y position values
+        forward_positions = [(px, py) for px, py, _ in path_points]
+        return_positions = list(reversed(forward_positions))
+        all_positions = forward_positions + return_positions
+        
+        # Calculate keyTimes
+        total_points = len(all_positions)
+        key_times = ";".join([f"{i/(total_points-1):.6f}" for i in range(total_points)])
+        
+        # Build position values string
+        position_values = ";".join([f"{px},{py}" for px, py in all_positions])
+        
+        # Build visibility keyTimes for each Pac-Man (right and left facing)
+        # We need to show the correct one based on direction
+        right_opacity = []
+        left_opacity = []
+        
+        for d in all_directions:
+            if d == 1:  # Going right
+                right_opacity.append("1")
+                left_opacity.append("0")
+            else:  # Going left
+                right_opacity.append("0")
+                left_opacity.append("1")
+        
+        right_opacity_values = ";".join(right_opacity)
+        left_opacity_values = ";".join(left_opacity)
         
         svg += f'''
     
-    <!-- Motion path (invisible) - horizontal serpentine with return -->
-    <path id="motionPath" d="{path_d}" fill="none" stroke="none"/>
+    <!-- Pac-Man characters - separate for left and right facing -->
+    <!-- Pac-Man facing RIGHT -->
+    <use href="#pacmanRight" id="pacmanGoingRight" opacity="1">
+        <animateTransform attributeName="transform" type="translate"
+            values="{position_values}"
+            keyTimes="{key_times}"
+            dur="{total_duration}s" repeatCount="indefinite" calcMode="linear"/>
+        <animate attributeName="opacity"
+            values="{right_opacity_values}"
+            keyTimes="{key_times}"
+            dur="{total_duration}s" repeatCount="indefinite" calcMode="discrete"/>
+    </use>
     
-    <!-- Pac-Man character -->
-    <g id="pacman">
-        <animateMotion dur="{animation_duration * 2}s" repeatCount="indefinite" rotate="auto">
-            <mpath href="#motionPath"/>
-        </animateMotion>
-        
-        <!-- Pac-Man body -->
-        <circle cx="0" cy="0" r="6" fill="url(#pacmanGradient)"/>
-        
-        <!-- Chomping mouth animation -->
-        <path fill="{BG_COLOR}">
-            <animate attributeName="d" dur="0.2s" repeatCount="indefinite"
-                values="M 0,0 L 6,2 L 6,-2 Z;
-                        M 0,0 L 6,0.5 L 6,-0.5 Z;
-                        M 0,0 L 6,2 L 6,-2 Z"/>
-        </path>
-        
-        <!-- Eye -->
-        <circle cx="-1" cy="-3" r="1" fill="{BG_COLOR}"/>
-    </g>'''
+    <!-- Pac-Man facing LEFT -->
+    <use href="#pacmanLeft" id="pacmanGoingLeft" opacity="0">
+        <animateTransform attributeName="transform" type="translate"
+            values="{position_values}"
+            keyTimes="{key_times}"
+            dur="{total_duration}s" repeatCount="indefinite" calcMode="linear"/>
+        <animate attributeName="opacity"
+            values="{left_opacity_values}"
+            keyTimes="{key_times}"
+            dur="{total_duration}s" repeatCount="indefinite" calcMode="discrete"/>
+    </use>'''
     
     # Legend
     svg += f'''
@@ -479,6 +569,7 @@ def generate_empty_svg() -> str:
 def main():
     """Main entry point."""
     print(f"[PACMAN] Generating Pac-Man contributions for {GITHUB_USERNAME}...")
+    print(f"[INFO] Token present: {'Yes' if GITHUB_TOKEN else 'No'}")
     
     # Fetch contributions
     print("[INFO] Fetching contribution data...")
