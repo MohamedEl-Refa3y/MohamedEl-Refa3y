@@ -31,7 +31,7 @@ jobs:
       
       - name: Generate Pac-Man SVG
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
         run: |
           python .github/scripts/generate_pacman.py
