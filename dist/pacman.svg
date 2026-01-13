@@ -46,24 +46,24 @@
     <text x="35" y="18" fill="#ffffff" 
           font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" 
           font-size="14" font-weight="600">
-        710 contributions in 2025-2026
+        245 contributions in 2024-2026
     </text>
     
     <!-- Month labels -->
     <g fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">
-        <text x="35" y="47">Jan</text>
-        <text x="74" y="47">Feb</text>
-        <text x="126" y="47">Mar</text>
-        <text x="191" y="47">Apr</text>
-        <text x="243" y="47">May</text>
-        <text x="295" y="47">Jun</text>
-        <text x="360" y="47">Jul</text>
-        <text x="412" y="47">Aug</text>
-        <text x="477" y="47">Sep</text>
-        <text x="529" y="47">Oct</text>
-        <text x="581" y="47">Nov</text>
-        <text x="646" y="47">Dec</text>
-        <text x="698" y="47">Jan</text>
+        <text x="35" y="47">Dec</text>
+        <text x="48" y="47">Jan</text>
+        <text x="100" y="47">Feb</text>
+        <text x="152" y="47">Mar</text>
+        <text x="217" y="47">Apr</text>
+        <text x="269" y="47">May</text>
+        <text x="334" y="47">Jun</text>
+        <text x="386" y="47">Jul</text>
+        <text x="438" y="47">Aug</text>
+        <text x="503" y="47">Sep</text>
+        <text x="555" y="47">Oct</text>
+        <text x="607" y="47">Nov</text>
+        <text x="672" y="47">Dec</text>
     </g>
     
     <!-- Day labels (Mon, Wed, Fri) -->
@@ -84,14 +84,7 @@
         <rect x="74" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="87" y="55" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="92" cy="60" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="1.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="1.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="100" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="113" y="55" width="10" height="10" 
@@ -101,27 +94,13 @@
         <rect x="139" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="152" y="55" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="157" cy="60" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="2.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="2.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="165" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="178" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="191" y="55" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="196" cy="60" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="3.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="3.00s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="204" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="217" y="55" width="10" height="10" 
@@ -137,25 +116,11 @@
         <rect x="282" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="295" y="55" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="300" cy="60" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="5.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="5.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="308" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="321" y="55" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="326" cy="60" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="5.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="5.50s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="334" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="347" y="55" width="10" height="10" 
@@ -173,14 +138,7 @@
         <rect x="425" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="438" y="55" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="443" cy="60" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="7.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="7.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="451" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="464" y="55" width="10" height="10" 
@@ -194,14 +152,7 @@
         <rect x="516" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="529" y="55" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="534" cy="60" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="9.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="9.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="542" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="555" y="55" width="10" height="10" 
@@ -209,14 +160,7 @@
         <rect x="568" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="581" y="55" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="586" cy="60" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="10.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="10.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="594" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="607" y="55" width="10" height="10" 
@@ -234,23 +178,9 @@
         <rect x="685" y="55" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="698" y="55" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="703" cy="60" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="12.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="12.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="711" y="55" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="716" cy="60" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="13.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="13.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="711" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="698" y="68" width="10" height="10" 
@@ -258,229 +188,75 @@
         <rect x="685" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="672" y="68" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="677" cy="73" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="14.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="14.00s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="659" y="68" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="664" cy="73" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="14.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="14.25s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="646" y="68" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="651" cy="73" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="14.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="14.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="633" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="638" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="14.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="14.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="620" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="625" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="15.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="15.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="607" y="68" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="612" cy="73" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="15.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="15.25s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="594" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="581" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="568" y="68" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="573" cy="73" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="16.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="16.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="555" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="560" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="16.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="16.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="542" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="529" y="68" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="534" cy="73" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="16.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="16.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="516" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="521" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="17.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="17.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="503" y="68" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="508" cy="73" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="17.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="17.25s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="490" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="477" y="68" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="482" cy="73" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="17.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="17.75s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="464" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="451" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="438" y="68" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="443" cy="73" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="18.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="18.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="425" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="430" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="18.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="18.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="412" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="399" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="386" y="68" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="391" cy="73" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="19.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="19.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="373" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="360" y="68" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="365" cy="73" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="20.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="20.00s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="347" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="334" y="68" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="339" cy="73" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="20.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="20.50s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="321" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="308" y="68" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="313" cy="73" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="21.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="21.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="295" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="300" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="21.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="21.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="282" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="269" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="256" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="261" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="22.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="22.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="243" y="68" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="248" cy="73" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="22.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="22.25s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="230" y="68" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="235" cy="73" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="22.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="22.50s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="217" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="204" y="68" width="10" height="10" 
@@ -488,98 +264,42 @@
         <rect x="191" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="178" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="183" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="23.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="23.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="165" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="152" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="157" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="24.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="24.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="139" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="126" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="131" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="24.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="24.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="113" y="68" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="118" cy="73" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="24.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="24.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="100" y="68" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="105" cy="73" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="25.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="25.00s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="87" y="68" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="92" cy="73" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="25.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="25.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="74" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="61" y="68" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="66" cy="73" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="25.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="25.75s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="48" y="68" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="53" cy="73" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="26.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="26.00s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="35" y="68" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="35" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="48" y="81" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="53" cy="86" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="26.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="26.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
-        <rect x="61" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
+        <rect x="61" y="81" width="10" height="10" 
+              rx="2" fill="#39d353" class="contrib-cell"/>
+        <circle cx="66" cy="86" r="4.0" fill="#ffff00" 
+                opacity="0.8" filter="url(#glow)" class="contrib-dot">
+            <animate attributeName="opacity" begin="27.00s" dur="0.15s" 
+                     from="0.8" to="0" fill="freeze"/>
+            <animate attributeName="r" begin="27.00s" dur="0.15s" 
+                     from="4.0" to="0" fill="freeze"/>
+        </circle>
         <rect x="74" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="87" y="81" width="10" height="10" 
@@ -587,120 +307,43 @@
         <rect x="100" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="113" y="81" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="118" cy="86" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="28.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="28.00s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="126" y="81" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="131" cy="86" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="28.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="28.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="139" y="81" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="144" cy="86" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="28.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="28.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="152" y="81" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="157" cy="86" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="28.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="28.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="165" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="178" y="81" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="183" cy="86" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="29.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="29.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="191" y="81" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="196" cy="86" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="29.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="29.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="204" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="217" y="81" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="222" cy="86" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="30.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="30.00s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="230" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="243" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="256" y="81" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="261" cy="86" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="30.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="30.75s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="269" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="282" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="295" y="81" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="300" cy="86" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="31.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="31.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="308" y="81" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="313" cy="86" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="31.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="31.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="321" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="334" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="347" y="81" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="352" cy="86" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="32.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="32.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="360" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="373" y="81" width="10" height="10" 
@@ -710,85 +353,29 @@
         <rect x="399" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="412" y="81" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="417" cy="86" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="33.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="33.75s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="425" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="438" y="81" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="443" cy="86" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="34.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="34.25s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="451" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="464" y="81" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="469" cy="86" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="34.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="34.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="477" y="81" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="482" cy="86" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="35.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="35.00s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="490" y="81" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="495" cy="86" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="35.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="35.25s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="503" y="81" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="508" cy="86" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="35.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="35.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="516" y="81" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="521" cy="86" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="35.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="35.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="529" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="542" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="555" y="81" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="560" cy="86" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="36.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="36.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="568" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="581" y="81" width="10" height="10" 
@@ -798,14 +385,7 @@
         <rect x="607" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="620" y="81" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="625" cy="86" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="37.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="37.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="633" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="646" y="81" width="10" height="10" 
@@ -815,36 +395,15 @@
         <rect x="672" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="685" y="81" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="690" cy="86" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="39.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="39.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="698" y="81" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="703" cy="86" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="39.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="39.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="711" y="81" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="711" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="698" y="94" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="703" cy="99" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="40.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="40.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="685" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="672" y="94" width="10" height="10" 
@@ -852,63 +411,21 @@
         <rect x="659" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="646" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="651" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="41.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="41.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="633" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="620" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="625" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="41.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="41.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="607" y="94" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="612" cy="99" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="41.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="41.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="594" y="94" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="599" cy="99" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="42.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="42.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="581" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="568" y="94" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="573" cy="99" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="42.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="42.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="555" y="94" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="560" cy="99" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="42.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="42.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="542" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="529" y="94" width="10" height="10" 
@@ -918,149 +435,51 @@
         <rect x="503" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="490" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="495" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="44.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="44.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="477" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="464" y="94" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="469" cy="99" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="44.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="44.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="451" y="94" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="456" cy="99" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="44.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="44.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="438" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="443" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="45.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="45.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="425" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="412" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="399" y="94" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="404" cy="99" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="45.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="45.75s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="386" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="391" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="46.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="46.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="373" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="360" y="94" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="365" cy="99" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="46.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="46.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="347" y="94" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="352" cy="99" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="46.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="46.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="334" y="94" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="339" cy="99" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="47.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="47.00s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="321" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="326" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="47.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="47.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="308" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="295" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="282" y="94" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="287" cy="99" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="48.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="48.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="269" y="94" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="274" cy="99" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="48.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="48.25s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="256" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="243" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="230" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="235" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="49.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="49.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="217" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="204" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="209" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="49.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="49.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="191" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="178" y="94" width="10" height="10" 
@@ -1070,75 +489,33 @@
         <rect x="152" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="139" y="94" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="144" cy="99" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="50.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="50.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="126" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="131" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="51.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="51.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="113" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="100" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="105" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="51.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="51.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="87" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="74" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="79" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="52.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="52.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="61" y="94" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="66" cy="99" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="52.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="52.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="48" y="94" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="53" cy="99" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="52.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="52.50s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="35" y="94" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="35" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="48" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="53" cy="112" r="3.0" fill="#ffff00" 
+              rx="2" fill="#39d353" class="contrib-cell"/>
+        <circle cx="53" cy="112" r="4.0" fill="#ffff00" 
                 opacity="0.8" filter="url(#glow)" class="contrib-dot">
             <animate attributeName="opacity" begin="53.25s" dur="0.15s" 
                      from="0.8" to="0" fill="freeze"/>
             <animate attributeName="r" begin="53.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
+                     from="4.0" to="0" fill="freeze"/>
         </circle>
         <rect x="61" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
@@ -1147,174 +524,55 @@
         <rect x="87" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="100" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="105" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="54.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="54.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="113" y="107" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="118" cy="112" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="54.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="54.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="126" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="131" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="54.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="54.75s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="139" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="144" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="55.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="55.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="152" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="157" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="55.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="55.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="165" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="178" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="183" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="55.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="55.75s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="191" y="107" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="196" cy="112" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="56.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="56.00s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="204" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="217" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="222" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="56.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="56.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="230" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="235" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="56.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="56.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="243" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="256" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="261" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="57.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="57.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="269" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="274" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="57.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="57.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="282" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="295" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="300" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="58.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="58.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="308" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="321" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="334" y="107" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="339" cy="112" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="58.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="58.75s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="347" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="352" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="59.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="59.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="360" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="373" y="107" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="378" cy="112" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="59.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="59.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="386" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="399" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="404" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="60.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="60.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="412" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="417" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="60.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="60.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="425" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="438" y="107" width="10" height="10" 
@@ -1322,81 +580,25 @@
         <rect x="451" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="464" y="107" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="469" cy="112" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="61.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="61.25s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="477" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="490" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="495" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="61.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="61.75s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="503" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="508" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="62.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="62.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="516" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="521" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="62.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="62.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="529" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="534" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="62.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="62.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="542" y="107" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="547" cy="112" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="62.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="62.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="555" y="107" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="560" cy="112" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="63.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="63.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="568" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="581" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="586" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="63.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="63.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="594" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="607" y="107" width="10" height="10" 
@@ -1404,23 +606,9 @@
         <rect x="620" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="633" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="638" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="64.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="64.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="646" y="107" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="651" cy="112" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="64.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="64.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="659" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="672" y="107" width="10" height="10" 
@@ -1428,61 +616,19 @@
         <rect x="685" y="107" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="698" y="107" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="703" cy="112" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="65.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="65.75s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="711" y="107" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="716" cy="112" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="66.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="66.00s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="711" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="698" y="120" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="703" cy="125" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="66.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="66.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="685" y="120" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="690" cy="125" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="66.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="66.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="672" y="120" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="677" cy="125" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="67.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="67.00s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="659" y="120" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="664" cy="125" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="67.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="67.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="646" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="633" y="120" width="10" height="10" 
@@ -1500,67 +646,25 @@
         <rect x="555" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="542" y="120" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="547" cy="125" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="69.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="69.50s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="529" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="516" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="503" y="120" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="508" cy="125" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="70.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="70.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="490" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="477" y="120" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="482" cy="125" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="70.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="70.75s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="464" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="451" y="120" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="456" cy="125" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="71.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="71.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="438" y="120" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="443" cy="125" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="71.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="71.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="425" y="120" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="430" cy="125" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="71.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="71.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="412" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="399" y="120" width="10" height="10" 
@@ -1568,14 +672,7 @@
         <rect x="386" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="373" y="120" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="378" cy="125" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="72.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="72.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="360" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="347" y="120" width="10" height="10" 
@@ -1583,14 +680,7 @@
         <rect x="334" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="321" y="120" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="326" cy="125" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="73.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="73.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="308" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="295" y="120" width="10" height="10" 
@@ -1598,63 +688,21 @@
         <rect x="282" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="269" y="120" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="274" cy="125" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="74.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="74.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="256" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="243" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="230" y="120" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="235" cy="125" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="75.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="75.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="217" y="120" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="222" cy="125" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="75.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="75.75s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="204" y="120" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="209" cy="125" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="76.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="76.00s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="191" y="120" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="196" cy="125" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="76.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="76.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="178" y="120" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="183" cy="125" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="76.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="76.50s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="165" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="152" y="120" width="10" height="10" 
@@ -1662,91 +710,35 @@
         <rect x="139" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="126" y="120" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="131" cy="125" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="77.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="77.50s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="113" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="100" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="87" y="120" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="92" cy="125" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="78.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="78.25s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="74" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="61" y="120" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="66" cy="125" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="78.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="78.75s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="48" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="35" y="120" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="35" y="133" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="40" cy="138" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="79.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="79.50s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="48" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="61" y="133" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="66" cy="138" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="80.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="80.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="74" y="133" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="79" cy="138" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="80.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="80.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="87" y="133" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="92" cy="138" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="80.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="80.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="100" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="113" y="133" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="118" cy="138" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="81.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="81.00s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="126" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="139" y="133" width="10" height="10" 
@@ -1754,63 +746,21 @@
         <rect x="152" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="165" y="133" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="170" cy="138" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="82.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="82.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="178" y="133" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="183" cy="138" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="82.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="82.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="191" y="133" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="196" cy="138" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="82.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="82.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="204" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="217" y="133" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="222" cy="138" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="83.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="83.00s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="230" y="133" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="235" cy="138" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="83.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="83.25s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="243" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="256" y="133" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="261" cy="138" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="83.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="83.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="269" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="282" y="133" width="10" height="10" 
@@ -1834,45 +784,17 @@
         <rect x="399" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="412" y="133" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="417" cy="138" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="86.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="86.75s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="425" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="438" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="451" y="133" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="456" cy="138" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="87.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="87.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="464" y="133" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="469" cy="138" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="87.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="87.75s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="477" y="133" width="10" height="10" 
-              rx="2" fill="#006d32" class="contrib-cell"/>
-        <circle cx="482" cy="138" r="3.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="88.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="88.00s" dur="0.15s" 
-                     from="3.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="490" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="503" y="133" width="10" height="10" 
@@ -1880,23 +802,9 @@
         <rect x="516" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="529" y="133" width="10" height="10" 
-              rx="2" fill="#39d353" class="contrib-cell"/>
-        <circle cx="534" cy="138" r="4.0" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="89.00s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="89.00s" dur="0.15s" 
-                     from="4.0" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="542" y="133" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="547" cy="138" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="89.25s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="89.25s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="555" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="568" y="133" width="10" height="10" 
@@ -1914,23 +822,9 @@
         <rect x="646" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="659" y="133" width="10" height="10" 
-              rx="2" fill="#0e4429" class="contrib-cell"/>
-        <circle cx="664" cy="138" r="2.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="91.50s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="91.50s" dur="0.15s" 
-                     from="2.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="672" y="133" width="10" height="10" 
-              rx="2" fill="#26a641" class="contrib-cell"/>
-        <circle cx="677" cy="138" r="3.5" fill="#ffff00" 
-                opacity="0.8" filter="url(#glow)" class="contrib-dot">
-            <animate attributeName="opacity" begin="91.75s" dur="0.15s" 
-                     from="0.8" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="91.75s" dur="0.15s" 
-                     from="3.5" to="0" fill="freeze"/>
-        </circle>
+              rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="685" y="133" width="10" height="10" 
               rx="2" fill="#161b22" class="contrib-cell"/>
         <rect x="698" y="133" width="10" height="10" 
