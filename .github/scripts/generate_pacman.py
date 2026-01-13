@@ -3,7 +3,8 @@
 Pac-Man GitHub Contributions Generator
 
 Generates an animated SVG showing Pac-Man eating GitHub contribution dots
-in a calendar-style maze layout matching GitHub's contribution graph.
+in the exact GitHub contribution calendar layout.
+Pac-Man moves horizontally through rows in a serpentine pattern.
 """
 
 import os
@@ -18,30 +19,35 @@ GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 GITHUB_USERNAME = os.environ.get('GITHUB_USERNAME', 'MohamedEl-Refa3y')
 OUTPUT_PATH = 'dist/pacman.svg'
 
-# Visual constants - Calendar style like GitHub
-CELL_SIZE = 11
+# Visual constants - Exact GitHub contribution calendar style
+CELL_SIZE = 10
 CELL_GAP = 3
-CELL_TOTAL = CELL_SIZE + CELL_GAP
-WEEKS_TO_SHOW = 53  # Full year
+CELL_RADIUS = 2
+WEEKS_TO_SHOW = 53  # Full year (53 weeks)
 DAYS_IN_WEEK = 7
-MARGIN_TOP = 50
-MARGIN_LEFT = 40
-MARGIN_RIGHT = 20
-MARGIN_BOTTOM = 30
 
-# Colors
-BG_COLOR = "#0d1117"  # GitHub dark theme background
-EMPTY_CELL_COLOR = "#161b22"  # Empty contribution cell
+# Layout
+MARGIN_TOP = 55
+MARGIN_LEFT = 35
+MARGIN_RIGHT = 20
+MARGIN_BOTTOM = 25
+
+# Colors - GitHub dark theme exact colors
+BG_COLOR = "#0d1117"
+EMPTY_CELL_COLOR = "#161b22"
 LEVEL_COLORS = {
     0: "#161b22",  # No contributions
     1: "#0e4429",  # Low
-    2: "#006d32",  # Medium-low
+    2: "#006d32",  # Medium-low  
     3: "#26a641",  # Medium-high
     4: "#39d353"   # High
 }
 PACMAN_COLOR = "#ffff00"
-WALL_COLOR = "#30363d"
 TEXT_COLOR = "#8b949e"
+MONTH_TEXT_COLOR = "#8b949e"
+
+# Animation - SLOW speed
+ANIMATION_DURATION_PER_CELL = 0.25  # seconds per cell (slower = higher value)
 
 
 def fetch_contributions() -> Dict:
@@ -153,27 +159,29 @@ def contribution_level_to_int(level_str: str) -> int:
 
 
 def generate_mock_data() -> Dict:
-    """Generate mock contribution data for testing."""
+    """Generate mock contribution data matching GitHub's calendar."""
     import random
     contributions = []
     
-    # Generate data for the last 2 years
+    # Generate data for the last year (53 weeks)
     end_date = datetime.now()
-    start_date = end_date - timedelta(days=365*2)
+    # Align to the start of the week (Sunday)
+    days_since_sunday = (end_date.weekday() + 1) % 7
+    end_date = end_date - timedelta(days=days_since_sunday) + timedelta(days=6)
+    start_date = end_date - timedelta(weeks=52)
     
     current = start_date
     while current <= end_date:
         # Generate realistic contribution patterns
-        # More contributions on weekdays
         is_weekday = current.weekday() < 5
         
-        if random.random() < (0.6 if is_weekday else 0.3):
-            count = random.choices([1, 2, 5, 10, 20], weights=[0.4, 0.3, 0.15, 0.1, 0.05])[0]
-            if count == 1:
+        if random.random() < (0.5 if is_weekday else 0.25):
+            count = random.choices([1, 3, 6, 10, 15], weights=[0.35, 0.30, 0.20, 0.10, 0.05])[0]
+            if count <= 2:
                 level = 1
-            elif count <= 3:
+            elif count <= 5:
                 level = 2
-            elif count <= 8:
+            elif count <= 9:
                 level = 3
             else:
                 level = 4
@@ -192,84 +200,127 @@ def generate_mock_data() -> Dict:
     return {'contributions': contributions, 'years': sorted(years)}
 
 
-def organize_by_weeks(contributions: List[Dict]) -> List[List[Dict]]:
-    """Organize contributions into weeks (columns) for calendar view."""
+def build_calendar_grid(contributions: List[Dict]) -> List[List[Dict]]:
+    """
+    Build a 7 rows × 53 columns grid matching GitHub's contribution calendar.
+    Returns grid[day_of_week][week_index] = contribution data
+    """
     if not contributions:
-        return []
+        return [[None for _ in range(WEEKS_TO_SHOW)] for _ in range(DAYS_IN_WEEK)]
     
-    # Sort by date
+    # Sort by date and get last 53 weeks
     sorted_contribs = sorted(contributions, key=lambda x: x['date'])
     
-    # Group into weeks
-    weeks = []
-    current_week = []
+    # Build week-based structure
+    weeks_data = []
+    current_week = [None] * 7
     
     for contrib in sorted_contribs:
         date = datetime.strptime(contrib['date'], '%Y-%m-%d')
-        day_of_week = date.weekday()  # Monday = 0, Sunday = 6
-        # GitHub uses Sunday = 0, so adjust
-        github_day = (day_of_week + 1) % 7
+        # GitHub uses Sunday = 0
+        day_of_week = (date.weekday() + 1) % 7
+        contrib['day_of_week'] = day_of_week
+        contrib['x'] = 0  # Will be set later
+        contrib['y'] = 0
         
-        contrib['day_of_week'] = github_day
-        current_week.append(contrib)
+        current_week[day_of_week] = contrib
         
-        if github_day == 6:  # Saturday (end of GitHub week)
-            weeks.append(current_week)
-            current_week = []
+        if day_of_week == 6:  # Saturday (end of week)
+            weeks_data.append(current_week)
+            current_week = [None] * 7
     
-    if current_week:
-        weeks.append(current_week)
+    if any(c is not None for c in current_week):
+        weeks_data.append(current_week)
     
-    return weeks
+    # Take last 53 weeks
+    weeks_data = weeks_data[-WEEKS_TO_SHOW:]
+    
+    # Convert to grid[row][col] format (row = day of week, col = week)
+    grid = [[None for _ in range(len(weeks_data))] for _ in range(DAYS_IN_WEEK)]
+    
+    for week_idx, week in enumerate(weeks_data):
+        for day_idx, day_data in enumerate(week):
+            if day_data:
+                grid[day_idx][week_idx] = day_data
+    
+    return grid, weeks_data
+
+
+def get_month_labels(weeks_data: List[List[Dict]]) -> List[Tuple[int, str]]:
+    """Get month labels for the calendar header."""
+    months = []
+    current_month = None
+    
+    for week_idx, week in enumerate(weeks_data):
+        for day in week:
+            if day:
+                date = datetime.strptime(day['date'], '%Y-%m-%d')
+                month_name = date.strftime('%b')
+                if month_name != current_month:
+                    months.append((week_idx, month_name))
+                    current_month = month_name
+                break
+    
+    return months
 
 
 def generate_svg(contributions_data: Dict) -> str:
-    """Generate the Pac-Man SVG with calendar-style grid."""
+    """Generate the Pac-Man SVG with exact GitHub calendar layout."""
     contributions = contributions_data['contributions']
     years = contributions_data.get('years', [])
     
     if not contributions:
         return generate_empty_svg()
     
-    # Get last 53 weeks of contributions
-    weeks = organize_by_weeks(contributions)
-    weeks = weeks[-WEEKS_TO_SHOW:] if len(weeks) > WEEKS_TO_SHOW else weeks
+    # Build calendar grid
+    grid, weeks_data = build_calendar_grid(contributions)
+    num_weeks = len(weeks_data)
     
     # Calculate dimensions
-    width = MARGIN_LEFT + (len(weeks) * CELL_TOTAL) + MARGIN_RIGHT
-    height = MARGIN_TOP + (DAYS_IN_WEEK * CELL_TOTAL) + MARGIN_BOTTOM
+    width = MARGIN_LEFT + (num_weeks * (CELL_SIZE + CELL_GAP)) + MARGIN_RIGHT
+    height = MARGIN_TOP + (DAYS_IN_WEEK * (CELL_SIZE + CELL_GAP)) + MARGIN_BOTTOM
     
-    # Build path for Pac-Man animation (serpentine through the grid)
-    path_points = []
-    all_cells = []
-    
-    for week_idx, week in enumerate(weeks):
-        for day in week:
-            x = MARGIN_LEFT + (week_idx * CELL_TOTAL) + CELL_SIZE // 2
-            y = MARGIN_TOP + (day['day_of_week'] * CELL_TOTAL) + CELL_SIZE // 2
-            all_cells.append({
+    # Calculate cell positions
+    cells = []
+    for row in range(DAYS_IN_WEEK):
+        for col in range(num_weeks):
+            x = MARGIN_LEFT + col * (CELL_SIZE + CELL_GAP)
+            y = MARGIN_TOP + row * (CELL_SIZE + CELL_GAP)
+            cell_data = grid[row][col] if col < len(grid[row]) else None
+            cells.append({
                 'x': x,
                 'y': y,
-                'level': day['level'],
-                'count': day['count'],
-                'date': day['date']
+                'cx': x + CELL_SIZE // 2,
+                'cy': y + CELL_SIZE // 2,
+                'row': row,
+                'col': col,
+                'data': cell_data
             })
     
-    # Create serpentine path for Pac-Man
-    for week_idx in range(len(weeks)):
-        for day_idx in range(DAYS_IN_WEEK):
-            # Serpentine: go down on even weeks, up on odd weeks
-            actual_day = day_idx if week_idx % 2 == 0 else (DAYS_IN_WEEK - 1 - day_idx)
-            x = MARGIN_LEFT + (week_idx * CELL_TOTAL) + CELL_SIZE // 2
-            y = MARGIN_TOP + (actual_day * CELL_TOTAL) + CELL_SIZE // 2
-            path_points.append((x, y))
-    
-    # Animation duration based on number of cells
-    animation_duration = max(20, len(path_points) * 0.08)
+    # Build HORIZONTAL serpentine path for Pac-Man
+    # Move through each ROW, alternating direction
+    path_points = []
+    for row in range(DAYS_IN_WEEK):
+        row_cells = [c for c in cells if c['row'] == row]
+        if row % 2 == 0:
+            # Even rows: left to right
+            row_cells.sort(key=lambda c: c['col'])
+        else:
+            # Odd rows: right to left
+            row_cells.sort(key=lambda c: c['col'], reverse=True)
+        
+        for cell in row_cells:
+            path_points.append((cell['cx'], cell['cy'], cell))
     
     # Calculate stats
-    total_contributions = sum(c['count'] for c in contributions)
+    total_contributions = sum(c['count'] for c in contributions if c['count'] > 0)
     active_days = sum(1 for c in contributions if c['count'] > 0)
+    
+    # Animation duration - SLOW (0.25 seconds per cell)
+    animation_duration = len(path_points) * ANIMATION_DURATION_PER_CELL
+    
+    # Get month labels
+    month_labels = get_month_labels(weeks_data)
     
     # Build SVG
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" 
@@ -282,136 +333,132 @@ def generate_svg(contributions_data: Dict) -> str:
             <stop offset="100%" stop-color="{PACMAN_COLOR}"/>
         </radialGradient>
         
-        <!-- Glow effect -->
+        <!-- Glow effect for contribution dots -->
         <filter id="glow">
-            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
             <feMerge>
                 <feMergeNode in="coloredBlur"/>
                 <feMergeNode in="SourceGraphic"/>
             </feMerge>
         </filter>
-        
-        <!-- Drop shadow -->
-        <filter id="shadow">
-            <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.3"/>
-        </filter>
     </defs>
     
     <!-- Title -->
-    <text x="{width // 2}" y="20" fill="{TEXT_COLOR}" text-anchor="middle" 
-          font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600">
-        {GITHUB_USERNAME}'s Contribution Chomper
+    <text x="{MARGIN_LEFT}" y="18" fill="#ffffff" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" 
+          font-size="14" font-weight="600">
+        {total_contributions:,} contributions in {min(years) if years else datetime.now().year}-{max(years) if years else datetime.now().year}
     </text>
     
-    <!-- Stats -->
-    <text x="{width // 2}" y="38" fill="{TEXT_COLOR}" text-anchor="middle" 
-          font-family="'Segoe UI', Arial, sans-serif" font-size="11">
-        {total_contributions:,} contributions | {active_days} active days | {min(years) if years else 'N/A'}-{max(years) if years else 'N/A'}
-    </text>
+    <!-- Month labels -->
+    <g fill="{MONTH_TEXT_COLOR}" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">'''
     
-    <!-- Day labels -->
-    <g fill="{TEXT_COLOR}" font-family="'Segoe UI', Arial, sans-serif" font-size="9">
-        <text x="{MARGIN_LEFT - 8}" y="{MARGIN_TOP + CELL_TOTAL * 1 + 3}" text-anchor="end">Mon</text>
-        <text x="{MARGIN_LEFT - 8}" y="{MARGIN_TOP + CELL_TOTAL * 3 + 3}" text-anchor="end">Wed</text>
-        <text x="{MARGIN_LEFT - 8}" y="{MARGIN_TOP + CELL_TOTAL * 5 + 3}" text-anchor="end">Fri</text>
+    for week_idx, month_name in month_labels:
+        x = MARGIN_LEFT + week_idx * (CELL_SIZE + CELL_GAP)
+        svg += f'''
+        <text x="{x}" y="{MARGIN_TOP - 8}">{month_name}</text>'''
+    
+    svg += '''
     </g>
     
-    <!-- Contribution cells -->
+    <!-- Day labels (Sun, Mon, Tue, Wed, Thu, Fri, Sat) -->
+    <g fill="''' + TEXT_COLOR + '''" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9">
+        <text x="''' + str(MARGIN_LEFT - 25) + '''" y="''' + str(MARGIN_TOP + 1 * (CELL_SIZE + CELL_GAP) + 7) + '''">Mon</text>
+        <text x="''' + str(MARGIN_LEFT - 25) + '''" y="''' + str(MARGIN_TOP + 3 * (CELL_SIZE + CELL_GAP) + 7) + '''">Wed</text>
+        <text x="''' + str(MARGIN_LEFT - 25) + '''" y="''' + str(MARGIN_TOP + 5 * (CELL_SIZE + CELL_GAP) + 7) + '''">Fri</text>
+    </g>
+    
+    <!-- Contribution cells (GitHub calendar grid) -->
     <g id="cells">'''
     
     # Add contribution cells
-    for cell in all_cells:
-        color = LEVEL_COLORS.get(cell['level'], LEVEL_COLORS[0])
-        cell_x = cell['x'] - CELL_SIZE // 2
-        cell_y = cell['y'] - CELL_SIZE // 2
+    for idx, (px, py, cell) in enumerate(path_points):
+        cell_data = cell['data']
+        level = cell_data['level'] if cell_data else 0
+        color = LEVEL_COLORS.get(level, LEVEL_COLORS[0])
         
-        # Calculate delay for when Pac-Man reaches this cell
-        cell_idx = all_cells.index(cell)
-        delay = cell_idx * (animation_duration / len(all_cells))
+        # Cell position
+        cell_x = cell['x']
+        cell_y = cell['y']
         
-        if cell['level'] > 0:
-            # Active contribution cell - will be "eaten"
-            svg += f'''
-        <g>
-            <rect x="{cell_x}" y="{cell_y}" width="{CELL_SIZE}" height="{CELL_SIZE}" 
-                  rx="2" fill="{color}" opacity="1">
-                <animate attributeName="opacity" begin="{delay:.2f}s" dur="0.3s" 
-                         from="1" to="0.2" fill="freeze"/>
-            </rect>
-            <!-- Contribution dot that gets eaten -->
-            <circle cx="{cell['x']}" cy="{cell['y']}" r="{2 + cell['level']}" 
-                    fill="{PACMAN_COLOR}" opacity="0.9" filter="url(#glow)">
-                <animate attributeName="r" begin="{delay:.2f}s" dur="0.2s" 
-                         from="{2 + cell['level']}" to="0" fill="freeze"/>
-                <animate attributeName="opacity" begin="{delay:.2f}s" dur="0.2s" 
-                         from="0.9" to="0" fill="freeze"/>
-            </circle>
-        </g>'''
-        else:
-            # Empty cell
-            svg += f'''
+        # Calculate when Pac-Man reaches this cell
+        delay = idx * ANIMATION_DURATION_PER_CELL
+        
+        # Base cell (always visible)
+        svg += f'''
         <rect x="{cell_x}" y="{cell_y}" width="{CELL_SIZE}" height="{CELL_SIZE}" 
-              rx="2" fill="{color}"/>'''
+              rx="{CELL_RADIUS}" fill="{color}" class="contrib-cell"/>'''
+        
+        # Add glowing dot for cells with contributions (will be eaten)
+        if level > 0:
+            dot_radius = 2 + level * 0.5
+            svg += f'''
+        <circle cx="{px}" cy="{py}" r="{dot_radius}" fill="{PACMAN_COLOR}" 
+                opacity="0.8" filter="url(#glow)" class="contrib-dot">
+            <animate attributeName="opacity" begin="{delay:.2f}s" dur="0.15s" 
+                     from="0.8" to="0" fill="freeze"/>
+            <animate attributeName="r" begin="{delay:.2f}s" dur="0.15s" 
+                     from="{dot_radius}" to="0" fill="freeze"/>
+        </circle>'''
     
     svg += '''
     </g>'''
     
-    # Add Pac-Man with animation
+    # Build the motion path for Pac-Man (horizontal serpentine)
     if path_points:
         path_d = f"M {path_points[0][0]},{path_points[0][1]}"
-        for px, py in path_points[1:]:
+        for px, py, _ in path_points[1:]:
+            path_d += f" L {px},{py}"
+        # Return path (reverse to create loop)
+        for px, py, _ in reversed(path_points[:-1]):
             path_d += f" L {px},{py}"
         
         svg += f'''
     
-    <!-- Motion path (invisible) -->
+    <!-- Motion path (invisible) - horizontal serpentine with return -->
     <path id="motionPath" d="{path_d}" fill="none" stroke="none"/>
     
-    <!-- Pac-Man -->
-    <g id="pacman" filter="url(#shadow)">
-        <animateMotion dur="{animation_duration}s" repeatCount="indefinite" rotate="auto">
+    <!-- Pac-Man character -->
+    <g id="pacman">
+        <animateMotion dur="{animation_duration * 2}s" repeatCount="indefinite" rotate="auto">
             <mpath href="#motionPath"/>
         </animateMotion>
         
-        <!-- Body -->
-        <circle cx="0" cy="0" r="8" fill="url(#pacmanGradient)"/>
+        <!-- Pac-Man body -->
+        <circle cx="0" cy="0" r="6" fill="url(#pacmanGradient)"/>
         
-        <!-- Animated mouth -->
-        <g>
-            <path fill="{BG_COLOR}">
-                <animate attributeName="d" dur="0.15s" repeatCount="indefinite"
-                    values="M 0,0 L 8,3 L 8,-3 Z;
-                            M 0,0 L 8,1 L 8,-1 Z;
-                            M 0,0 L 8,3 L 8,-3 Z"/>
-            </path>
-        </g>
+        <!-- Chomping mouth animation -->
+        <path fill="{BG_COLOR}">
+            <animate attributeName="d" dur="0.2s" repeatCount="indefinite"
+                values="M 0,0 L 6,2 L 6,-2 Z;
+                        M 0,0 L 6,0.5 L 6,-0.5 Z;
+                        M 0,0 L 6,2 L 6,-2 Z"/>
+        </path>
         
         <!-- Eye -->
-        <circle cx="-1" cy="-4" r="1.5" fill="{BG_COLOR}"/>
-    </g>
-    
-    <!-- Score display -->
-    <g id="score">
-        <rect x="{width - 120}" y="5" width="110" height="25" rx="5" fill="{WALL_COLOR}" opacity="0.8"/>
-        <text x="{width - 65}" y="22" fill="{PACMAN_COLOR}" text-anchor="middle" 
-              font-family="'Courier New', monospace" font-size="12" font-weight="bold">
-            SCORE: {total_contributions}
-        </text>
-    </g>
-    
-    <!-- Legend -->
-    <g transform="translate({width - 140}, {height - 20})">
-        <text x="0" y="0" fill="{TEXT_COLOR}" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Less</text>'''
-        
-        for i, (level, color) in enumerate(LEVEL_COLORS.items()):
-            svg += f'''
-        <rect x="{30 + i * 14}" y="-9" width="10" height="10" rx="2" fill="{color}"/>'''
-        
-        svg += f'''
-        <text x="{30 + 5 * 14 + 5}" y="0" fill="{TEXT_COLOR}" font-family="'Segoe UI', Arial, sans-serif" font-size="9">More</text>
+        <circle cx="-1" cy="-3" r="1" fill="{BG_COLOR}"/>
     </g>'''
     
-    svg += '''
+    # Legend
+    svg += f'''
+    
+    <!-- Legend -->
+    <g transform="translate({width - 130}, {height - 15})">
+        <text x="0" y="0" fill="{TEXT_COLOR}" 
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" 
+              font-size="10">Less</text>'''
+    
+    for i, (level, color) in enumerate(LEVEL_COLORS.items()):
+        svg += f'''
+        <rect x="{30 + i * 13}" y="-9" width="{CELL_SIZE}" height="{CELL_SIZE}" 
+              rx="{CELL_RADIUS}" fill="{color}"/>'''
+    
+    svg += f'''
+        <text x="{30 + 5 * 13 + 5}" y="0" fill="{TEXT_COLOR}" 
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" 
+              font-size="10">More</text>
+    </g>
+    
 </svg>'''
     
     return svg
@@ -419,11 +466,12 @@ def generate_svg(contributions_data: Dict) -> str:
 
 def generate_empty_svg() -> str:
     """Generate a placeholder SVG when no contributions are found."""
-    return '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
-    <rect width="800" height="200" fill="#0d1117"/>
-    <text x="400" y="100" fill="#8b949e" text-anchor="middle" 
-          font-family="'Segoe UI', Arial, sans-serif" font-size="16">
-        No contributions yet - Start coding! 
+    return '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150">
+    <rect width="800" height="150" fill="#0d1117"/>
+    <text x="400" y="75" fill="#8b949e" text-anchor="middle" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" 
+          font-size="14">
+        No contributions yet - Start coding!
     </text>
 </svg>'''
 
