@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" 
-     style="background-color: #000000;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 802 178" 
+     style="background-color: #0d1117;">
     
     <defs>
         <!-- Pac-Man gradient -->
@@ -8,255 +8,3200 @@
             <stop offset="100%" stop-color="#ffff00"/>
         </radialGradient>
         
-        <!-- Glow effect for dots -->
+        <!-- Glow effect -->
         <filter id="glow">
-            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
             <feMerge>
                 <feMergeNode in="coloredBlur"/>
                 <feMergeNode in="SourceGraphic"/>
             </feMerge>
         </filter>
         
-        <!-- Pac-Man clip path for mouth animation -->
-        <clipPath id="pacmanMouth">
-            <path id="mouthPath">
-                <animate attributeName="d" 
-                    dur="0.3s" 
-                    repeatCount="indefinite"
-                    values="M 0,0 L 20,0 L 20,20 L 0,20 Z;
-                            M 10,10 L 20,5 L 20,15 Z M 0,0 L 10,0 L 10,20 L 0,20 Z;
-                            M 0,0 L 20,0 L 20,20 L 0,20 Z"/>
-            </path>
-        </clipPath>
+        <!-- Drop shadow -->
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.3"/>
+        </filter>
     </defs>
     
-    <!-- Maze walls background pattern -->
-    <pattern id="mazePattern" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-        <rect width="24" height="24" fill="#000000"/>
-        <rect x="0" y="0" width="2" height="24" fill="#1a1a4e" opacity="0.3"/>
-        <rect x="0" y="0" width="24" height="2" fill="#1a1a4e" opacity="0.3"/>
-    </pattern>
-    <rect width="100%" height="100%" fill="url(#mazePattern)"/>
-    
     <!-- Title -->
-    <text x="400.0" y="20" fill="#ffffff" text-anchor="middle" 
-          font-family="'Press Start 2P', 'Courier New', monospace" font-size="12">
-        🎮 CONTRIBUTION CHOMPER 🎮
+    <text x="401" y="20" fill="#8b949e" text-anchor="middle" 
+          font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600">
+        MohamedEl-Refa3y's Contribution Chomper
     </text>
     
-    <!-- Year labels -->
-    <text x="400.0" y="35" fill="#888888" text-anchor="middle" 
-          font-family="Arial, sans-serif" font-size="10">
-        2024 - 2026 (13 active days)
+    <!-- Stats -->
+    <text x="401" y="38" fill="#8b949e" text-anchor="middle" 
+          font-family="'Segoe UI', Arial, sans-serif" font-size="11">
+        1,414 contributions | 373 active days | 2024-2026
     </text>
-    <!-- Contribution dots -->    <g id="dots">
-        <circle cx="36" cy="36" r="3" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="0.00s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="0.00s" 
-                     dur="0.2s" 
-                     from="3" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="48" cy="36" r="5" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="0.77s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="0.77s" 
-                     dur="0.2s" 
-                     from="5" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="60" cy="36" r="5" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="1.54s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="1.54s" 
-                     dur="0.2s" 
-                     from="5" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="72" cy="36" r="3" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="2.31s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="2.31s" 
-                     dur="0.2s" 
-                     from="3" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="84" cy="36" r="3" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="3.08s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="3.08s" 
-                     dur="0.2s" 
-                     from="3" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="96" cy="36" r="3" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="3.85s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="3.85s" 
-                     dur="0.2s" 
-                     from="3" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="108" cy="36" r="3" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="4.62s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="4.62s" 
-                     dur="0.2s" 
-                     from="3" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="120" cy="36" r="3" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="5.38s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="5.38s" 
-                     dur="0.2s" 
-                     from="3" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="132" cy="36" r="3" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="6.15s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="6.15s" 
-                     dur="0.2s" 
-                     from="3" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="144" cy="36" r="3" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="6.92s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="6.92s" 
-                     dur="0.2s" 
-                     from="3" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="156" cy="36" r="5" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="7.69s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="7.69s" 
-                     dur="0.2s" 
-                     from="5" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="168" cy="36" r="2" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="8.46s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="8.46s" 
-                     dur="0.2s" 
-                     from="2" to="0" 
-                     fill="freeze"/>
-        </circle>
-        <circle cx="180" cy="36" r="5" fill="#ffff00" filter="url(#glow)" opacity="1">
-            <animate attributeName="opacity" 
-                     begin="9.23s" 
-                     dur="0.2s" 
-                     from="1" to="0" 
-                     fill="freeze"/>
-            <animate attributeName="r" 
-                     begin="9.23s" 
-                     dur="0.2s" 
-                     from="5" to="0" 
-                     fill="freeze"/>
-        </circle>    </g>
-    <!-- Pac-Man -->
-    <g id="pacman">
-        <!-- Body -->
-        <circle cx="0" cy="0" r="10" fill="url(#pacmanGradient)">
-        </circle>
-        <!-- Mouth (chomping animation) -->
+    
+    <!-- Day labels -->
+    <g fill="#8b949e" font-family="'Segoe UI', Arial, sans-serif" font-size="9">
+        <text x="32" y="67" text-anchor="end">Mon</text>
+        <text x="32" y="95" text-anchor="end">Wed</text>
+        <text x="32" y="123" text-anchor="end">Fri</text>
+    </g>
+    
+    <!-- Contribution cells -->
+    <g id="cells">
+        <rect x="40" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="40" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
         <g>
-            <path fill="#000000">
-                <animate attributeName="d" 
-                    dur="0.2s" 
-                    repeatCount="indefinite"
-                    values="M 0,0 L 10,0 L 10,5 L 0,0 
-                            L 10,-5 L 10,0 Z;
-                            M 0,0 L 10,3 L 10,5 L 0,0 
-                            L 10,-5 L 10,-3 Z;
-                            M 0,0 L 10,0 L 10,5 L 0,0 
-                            L 10,-5 L 10,0 Z"/>
-            </path>
+            <rect x="40" y="78" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="0.16s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="45" cy="83" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="0.16s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="0.16s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
         </g>
-        <!-- Eye -->
-        <circle cx="-2" cy="-5" r="2" fill="#000000"/>
-        
-        <!-- Movement animation -->
-        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
-            <mpath href="#motionPath"/>
-        </animateMotion>
+        <g>
+            <rect x="40" y="92" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="0.24s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="45" cy="97" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="0.24s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="0.24s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="40" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="0.32s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="45" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="0.32s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="0.32s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="40" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="40" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="54" y="50" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="0.57s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="59" cy="55" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="0.57s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="0.57s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="54" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="0.65s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="59" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="0.65s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="0.65s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="54" y="78" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="0.73s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="59" cy="83" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="0.73s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="0.73s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="54" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="54" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="54" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="54" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="68" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="68" y="64" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="1.21s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="73" cy="69" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="1.21s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="1.21s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="68" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="1.29s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="73" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="1.29s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="1.29s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="68" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="1.37s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="73" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="1.37s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="1.37s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="68" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="68" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="68" y="134" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="1.62s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="73" cy="139" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="1.62s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="1.62s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="82" y="50" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="1.70s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="87" cy="55" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="1.70s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="1.70s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="82" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="82" y="78" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="1.86s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="87" cy="83" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="1.86s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="1.86s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="82" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="1.94s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="87" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="1.94s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="1.94s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="82" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="82" y="120" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="2.10s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="87" cy="125" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="2.10s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="2.10s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="82" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="96" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="96" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="2.35s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="101" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="2.35s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="2.35s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="96" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="96" y="92" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="2.51s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="101" cy="97" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="2.51s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="2.51s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="96" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="96" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="2.67s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="101" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="2.67s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="2.67s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="96" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="110" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="110" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="110" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="110" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="3.07s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="115" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="3.07s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="3.07s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="110" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="3.15s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="115" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="3.15s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="3.15s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="110" y="120" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="3.23s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="115" cy="125" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="3.23s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="3.23s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="110" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="124" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="124" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="3.48s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="129" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="3.48s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="3.48s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="124" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="3.56s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="129" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="3.56s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="3.56s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="124" y="92" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="3.64s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="129" cy="97" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="3.64s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="3.64s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="124" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="3.72s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="129" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="3.72s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="3.72s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="124" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="124" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="138" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="138" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="138" y="78" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="4.12s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="143" cy="83" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="4.12s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="4.12s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="138" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="4.21s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="143" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="4.21s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="4.21s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="138" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="138" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="4.37s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="143" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="4.37s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="4.37s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="138" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="152" y="50" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="4.53s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="157" cy="55" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="4.53s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="4.53s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="152" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="152" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="152" y="92" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="4.77s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="157" cy="97" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="4.77s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="4.77s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="152" y="106" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="4.85s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="157" cy="111" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="4.85s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="4.85s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="152" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="4.93s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="157" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="4.93s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="4.93s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="152" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="166" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="166" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="166" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="166" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="166" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="5.42s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="171" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="5.42s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="5.42s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="166" y="120" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="5.50s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="171" cy="125" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="5.50s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="5.50s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="166" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="180" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="180" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="5.74s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="185" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="5.74s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="5.74s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="180" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="5.82s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="185" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="5.82s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="5.82s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="180" y="92" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="5.90s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="185" cy="97" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="5.90s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="5.90s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="180" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="5.98s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="185" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="5.98s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="5.98s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="180" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="180" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="194" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="194" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="194" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="194" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="194" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="6.55s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="199" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="6.55s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="6.55s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="194" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="6.63s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="199" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="6.63s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="6.63s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="194" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="208" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="208" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="6.87s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="213" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="6.87s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="6.87s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="208" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="6.95s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="213" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="6.95s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="6.95s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="208" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="208" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="208" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="7.20s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="213" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="7.20s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="7.20s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="208" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="222" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="222" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="7.44s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="227" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="7.44s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="7.44s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="222" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="7.52s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="227" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="7.52s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="7.52s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="222" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="222" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="7.68s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="227" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="7.68s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="7.68s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="222" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="7.76s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="227" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="7.76s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="7.76s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="222" y="134" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="7.84s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="227" cy="139" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="7.84s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="7.84s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="236" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="236" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="8.01s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="241" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="8.01s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="8.01s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="236" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="236" y="92" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="8.17s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="241" cy="97" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="8.17s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="8.17s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="236" y="106" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="8.25s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="241" cy="111" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="8.25s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="8.25s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="236" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="236" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="250" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="250" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="8.57s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="255" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="8.57s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="8.57s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="250" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="250" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="8.73s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="255" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="8.73s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="8.73s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="250" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="250" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="250" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="264" y="50" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="9.06s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="269" cy="55" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="9.06s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="9.06s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="264" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="264" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="9.22s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="269" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="9.22s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="9.22s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="264" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="264" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="264" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="9.46s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="269" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="9.46s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="9.46s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="264" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="278" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="278" y="64" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="9.70s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="283" cy="69" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="9.70s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="9.70s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="278" y="78" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="9.79s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="283" cy="83" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="9.79s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="9.79s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="278" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="278" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="9.95s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="283" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="9.95s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="9.95s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="278" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="278" y="134" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="10.11s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="283" cy="139" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="10.11s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="10.11s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="292" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="292" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="292" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="292" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="292" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="10.51s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="297" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="10.51s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="10.51s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="292" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="10.59s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="297" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="10.59s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="10.59s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="292" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="306" y="50" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="10.76s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="311" cy="55" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="10.76s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="10.76s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="306" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="306" y="78" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="10.92s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="311" cy="83" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="10.92s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="10.92s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="306" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="306" y="106" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="11.08s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="311" cy="111" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="11.08s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="11.08s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="306" y="120" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="11.16s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="311" cy="125" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="11.16s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="11.16s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="306" y="134" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="11.24s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="311" cy="139" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="11.24s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="11.24s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="320" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="320" y="64" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="11.40s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="325" cy="69" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="11.40s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="11.40s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="320" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="320" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="11.56s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="325" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="11.56s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="11.56s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="320" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="11.65s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="325" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="11.65s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="11.65s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="320" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="11.73s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="325" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="11.73s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="11.73s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="320" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="334" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="334" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="334" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="12.05s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="339" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="12.05s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="12.05s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="334" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="334" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="12.21s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="339" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="12.21s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="12.21s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="334" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="12.29s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="339" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="12.29s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="12.29s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="334" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="348" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="348" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="348" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="348" y="92" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="12.70s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="353" cy="97" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="12.70s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="12.70s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="348" y="106" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="12.78s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="353" cy="111" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="12.78s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="12.78s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="348" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="348" y="134" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="12.94s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="353" cy="139" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="12.94s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="12.94s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="362" y="50" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="13.02s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="367" cy="55" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="13.02s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="13.02s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="362" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="13.10s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="367" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="13.10s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="13.10s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="362" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="362" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="362" y="106" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="13.34s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="367" cy="111" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="13.34s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="13.34s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="362" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="13.42s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="367" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="13.42s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="13.42s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="362" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="376" y="50" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="13.59s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="381" cy="55" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="13.59s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="13.59s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="376" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="13.67s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="381" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="13.67s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="13.67s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="376" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="376" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="13.83s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="381" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="13.83s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="13.83s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="376" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="376" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="13.99s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="381" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="13.99s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="13.99s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="376" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="390" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="390" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="390" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="390" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="390" y="106" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="14.48s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="395" cy="111" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="14.48s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="14.48s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="390" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="390" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="404" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="404" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="14.80s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="409" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="14.80s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="14.80s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="404" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="404" y="92" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="14.96s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="409" cy="97" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="14.96s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="14.96s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="404" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="15.04s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="409" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="15.04s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="15.04s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="404" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="404" y="134" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="15.20s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="409" cy="139" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="15.20s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="15.20s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="418" y="50" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="15.28s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="423" cy="55" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="15.28s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="15.28s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="418" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="15.37s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="423" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="15.37s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="15.37s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="418" y="78" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="15.45s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="423" cy="83" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="15.45s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="15.45s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="418" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="15.53s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="423" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="15.53s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="15.53s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="418" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="418" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="418" y="134" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="15.77s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="423" cy="139" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="15.77s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="15.77s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="432" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="432" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="432" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="432" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="432" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="432" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="16.26s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="437" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="16.26s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="16.26s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="432" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="446" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="446" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="446" y="78" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="16.58s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="451" cy="83" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="16.58s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="16.58s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="446" y="92" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="16.66s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="451" cy="97" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="16.66s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="16.66s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="446" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="16.74s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="451" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="16.74s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="16.74s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="446" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="16.82s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="451" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="16.82s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="16.82s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="446" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="460" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="460" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="17.06s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="465" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="17.06s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="17.06s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="460" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="17.14s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="465" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="17.14s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="17.14s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="460" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="460" y="106" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="17.31s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="465" cy="111" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="17.31s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="17.31s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="460" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="17.39s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="465" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="17.39s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="17.39s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="460" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="474" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="474" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="474" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="474" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="474" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="17.87s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="479" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="17.87s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="17.87s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="474" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="17.95s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="479" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="17.95s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="17.95s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="474" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="488" y="50" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="18.12s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="493" cy="55" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="18.12s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="18.12s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="488" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="18.20s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="493" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="18.20s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="18.20s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="488" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="488" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="488" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="488" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="18.52s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="493" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="18.52s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="18.52s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="488" y="134" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="18.60s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="493" cy="139" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="18.60s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="18.60s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="502" y="50" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="18.68s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="507" cy="55" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="18.68s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="18.68s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="502" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="18.76s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="507" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="18.76s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="18.76s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="502" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="502" y="92" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="18.92s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="507" cy="97" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="18.92s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="18.92s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="502" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="502" y="120" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="19.09s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="507" cy="125" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.09s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.09s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="502" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="516" y="50" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="19.25s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="521" cy="55" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.25s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.25s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="516" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="19.33s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="521" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.33s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.33s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="516" y="78" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="19.41s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="521" cy="83" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.41s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.41s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="516" y="92" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="19.49s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="521" cy="97" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.49s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.49s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="516" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="19.57s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="521" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.57s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.57s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="516" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="19.65s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="521" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.65s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.65s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="516" y="134" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="19.73s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="521" cy="139" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.73s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.73s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="530" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="530" y="64" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="19.89s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="535" cy="69" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.89s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.89s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="530" y="78" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="19.98s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="535" cy="83" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="19.98s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="19.98s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="530" y="92" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="20.06s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="535" cy="97" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="20.06s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="20.06s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="530" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="20.14s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="535" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="20.14s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="20.14s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="530" y="120" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="20.22s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="535" cy="125" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="20.22s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="20.22s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="530" y="134" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="20.30s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="535" cy="139" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="20.30s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="20.30s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="544" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="544" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="544" y="78" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="20.54s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="549" cy="83" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="20.54s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="20.54s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="544" y="92" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="20.62s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="549" cy="97" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="20.62s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="20.62s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="544" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="20.70s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="549" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="20.70s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="20.70s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="544" y="120" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="20.78s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="549" cy="125" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="20.78s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="20.78s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="544" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="558" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="558" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="21.03s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="563" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="21.03s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="21.03s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="558" y="78" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="21.11s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="563" cy="83" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="21.11s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="21.11s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="558" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="558" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="558" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="21.35s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="563" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="21.35s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="21.35s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="558" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="572" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="572" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="572" y="78" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="21.67s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="577" cy="83" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="21.67s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="21.67s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="572" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="572" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="572" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="572" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="586" y="50" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="22.08s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="591" cy="55" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="22.08s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="22.08s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="586" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="586" y="78" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="22.24s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="591" cy="83" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="22.24s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="22.24s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="586" y="92" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="22.32s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="591" cy="97" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="22.32s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="22.32s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="586" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="586" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="586" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="600" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="600" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="600" y="78" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="22.81s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="605" cy="83" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="22.81s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="22.81s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="600" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="600" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="22.97s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="605" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="22.97s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="22.97s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="600" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="23.05s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="605" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="23.05s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="23.05s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="600" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="614" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="614" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="23.29s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="619" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="23.29s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="23.29s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="614" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="614" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="614" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="23.53s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="619" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="23.53s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="23.53s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="614" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="23.61s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="619" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="23.61s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="23.61s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="614" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="628" y="50" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="23.78s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="633" cy="55" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="23.78s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="23.78s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="628" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="628" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="23.94s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="633" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="23.94s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="23.94s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="628" y="92" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="24.02s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="633" cy="97" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="24.02s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="24.02s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="628" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="24.10s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="633" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="24.10s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="24.10s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="628" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="628" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="642" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="642" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="24.42s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="647" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="24.42s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="24.42s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="642" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="642" y="92" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="24.59s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="647" cy="97" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="24.59s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="24.59s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="642" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="642" y="120" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="24.75s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="647" cy="125" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="24.75s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="24.75s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="642" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="656" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="656" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="24.99s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="661" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="24.99s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="24.99s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="656" y="78" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="25.07s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="661" cy="83" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="25.07s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="25.07s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="656" y="92" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="25.15s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="661" cy="97" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="25.15s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="25.15s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="656" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="656" y="120" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="25.31s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="661" cy="125" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="25.31s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="25.31s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="656" y="134" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="25.39s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="661" cy="139" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="25.39s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="25.39s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="670" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="670" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="670" y="78" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="25.64s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="675" cy="83" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="25.64s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="25.64s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="670" y="92" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="25.72s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="675" cy="97" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="25.72s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="25.72s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="670" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="25.80s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="675" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="25.80s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="25.80s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="670" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="670" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="684" y="50" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="26.04s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="689" cy="55" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.04s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.04s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="684" y="64" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="26.12s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="689" cy="69" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.12s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.12s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="684" y="78" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="26.20s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="689" cy="83" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.20s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.20s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="684" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="684" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="684" y="120" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="26.45s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="689" cy="125" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.45s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.45s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="684" y="134" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="26.53s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="689" cy="139" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.53s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.53s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="698" y="50" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="26.61s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="703" cy="55" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.61s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.61s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="698" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="698" y="78" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="26.77s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="703" cy="83" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.77s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.77s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="698" y="92" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="26.85s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="703" cy="97" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.85s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.85s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="698" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="26.93s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="703" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="26.93s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="26.93s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="698" y="120" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="27.01s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="703" cy="125" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="27.01s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="27.01s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="698" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="712" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="712" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="712" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="712" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="712" y="106" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="712" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="712" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="726" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="726" y="64" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="27.82s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="731" cy="69" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="27.82s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="27.82s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="726" y="78" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="27.90s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="731" cy="83" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="27.90s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="27.90s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="726" y="92" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="726" y="106" width="11" height="11" 
+                  rx="2" fill="#26a641" opacity="1">
+                <animate attributeName="opacity" begin="28.06s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="731" cy="111" r="5" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="28.06s" dur="0.2s" 
+                         from="5" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="28.06s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="726" y="120" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="726" y="134" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="28.22s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="731" cy="139" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="28.22s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="28.22s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="740" y="50" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="28.31s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="745" cy="55" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="28.31s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="28.31s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="740" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="740" y="78" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="740" y="92" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="28.55s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="745" cy="97" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="28.55s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="28.55s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="740" y="106" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="28.63s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="745" cy="111" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="28.63s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="28.63s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="740" y="120" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="28.71s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="745" cy="125" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="28.71s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="28.71s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="740" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="754" y="50" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="28.87s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="759" cy="55" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="28.87s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="28.87s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="754" y="64" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="28.95s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="759" cy="69" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="28.95s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="28.95s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="754" y="78" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="29.03s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="759" cy="83" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="29.03s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="29.03s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="754" y="92" width="11" height="11" 
+                  rx="2" fill="#006d32" opacity="1">
+                <animate attributeName="opacity" begin="29.11s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="759" cy="97" r="4" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="29.11s" dur="0.2s" 
+                         from="4" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="29.11s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="754" y="106" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="29.19s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="759" cy="111" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="29.19s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="29.19s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <g>
+            <rect x="754" y="120" width="11" height="11" 
+                  rx="2" fill="#39d353" opacity="1">
+                <animate attributeName="opacity" begin="29.28s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="759" cy="125" r="6" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="29.28s" dur="0.2s" 
+                         from="6" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="29.28s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
+        <rect x="754" y="134" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="768" y="50" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <rect x="768" y="64" width="11" height="11" 
+              rx="2" fill="#161b22"/>
+        <g>
+            <rect x="768" y="78" width="11" height="11" 
+                  rx="2" fill="#0e4429" opacity="1">
+                <animate attributeName="opacity" begin="29.60s" dur="0.3s" 
+                         from="1" to="0.2" fill="freeze"/>
+            </rect>
+            <!-- Contribution dot that gets eaten -->
+            <circle cx="773" cy="83" r="3" 
+                    fill="#ffff00" opacity="0.9" filter="url(#glow)">
+                <animate attributeName="r" begin="29.60s" dur="0.2s" 
+                         from="3" to="0" fill="freeze"/>
+                <animate attributeName="opacity" begin="29.60s" dur="0.2s" 
+                         from="0.9" to="0" fill="freeze"/>
+            </circle>
+        </g>
     </g>
     
     <!-- Motion path (invisible) -->
-    <path id="motionPath" d="M 36,36 L 36,36 L 48,36 L 60,36 L 72,36 L 84,36 L 96,36 L 108,36 L 120,36 L 132,36 L 144,36 L 156,36 L 168,36 L 180,36" 
-          fill="none" stroke="none"/>
-    <!-- Score -->
+    <path id="motionPath" d="M 45,55 L 45,69 L 45,83 L 45,97 L 45,111 L 45,125 L 45,139 L 59,139 L 59,125 L 59,111 L 59,97 L 59,83 L 59,69 L 59,55 L 73,55 L 73,69 L 73,83 L 73,97 L 73,111 L 73,125 L 73,139 L 87,139 L 87,125 L 87,111 L 87,97 L 87,83 L 87,69 L 87,55 L 101,55 L 101,69 L 101,83 L 101,97 L 101,111 L 101,125 L 101,139 L 115,139 L 115,125 L 115,111 L 115,97 L 115,83 L 115,69 L 115,55 L 129,55 L 129,69 L 129,83 L 129,97 L 129,111 L 129,125 L 129,139 L 143,139 L 143,125 L 143,111 L 143,97 L 143,83 L 143,69 L 143,55 L 157,55 L 157,69 L 157,83 L 157,97 L 157,111 L 157,125 L 157,139 L 171,139 L 171,125 L 171,111 L 171,97 L 171,83 L 171,69 L 171,55 L 185,55 L 185,69 L 185,83 L 185,97 L 185,111 L 185,125 L 185,139 L 199,139 L 199,125 L 199,111 L 199,97 L 199,83 L 199,69 L 199,55 L 213,55 L 213,69 L 213,83 L 213,97 L 213,111 L 213,125 L 213,139 L 227,139 L 227,125 L 227,111 L 227,97 L 227,83 L 227,69 L 227,55 L 241,55 L 241,69 L 241,83 L 241,97 L 241,111 L 241,125 L 241,139 L 255,139 L 255,125 L 255,111 L 255,97 L 255,83 L 255,69 L 255,55 L 269,55 L 269,69 L 269,83 L 269,97 L 269,111 L 269,125 L 269,139 L 283,139 L 283,125 L 283,111 L 283,97 L 283,83 L 283,69 L 283,55 L 297,55 L 297,69 L 297,83 L 297,97 L 297,111 L 297,125 L 297,139 L 311,139 L 311,125 L 311,111 L 311,97 L 311,83 L 311,69 L 311,55 L 325,55 L 325,69 L 325,83 L 325,97 L 325,111 L 325,125 L 325,139 L 339,139 L 339,125 L 339,111 L 339,97 L 339,83 L 339,69 L 339,55 L 353,55 L 353,69 L 353,83 L 353,97 L 353,111 L 353,125 L 353,139 L 367,139 L 367,125 L 367,111 L 367,97 L 367,83 L 367,69 L 367,55 L 381,55 L 381,69 L 381,83 L 381,97 L 381,111 L 381,125 L 381,139 L 395,139 L 395,125 L 395,111 L 395,97 L 395,83 L 395,69 L 395,55 L 409,55 L 409,69 L 409,83 L 409,97 L 409,111 L 409,125 L 409,139 L 423,139 L 423,125 L 423,111 L 423,97 L 423,83 L 423,69 L 423,55 L 437,55 L 437,69 L 437,83 L 437,97 L 437,111 L 437,125 L 437,139 L 451,139 L 451,125 L 451,111 L 451,97 L 451,83 L 451,69 L 451,55 L 465,55 L 465,69 L 465,83 L 465,97 L 465,111 L 465,125 L 465,139 L 479,139 L 479,125 L 479,111 L 479,97 L 479,83 L 479,69 L 479,55 L 493,55 L 493,69 L 493,83 L 493,97 L 493,111 L 493,125 L 493,139 L 507,139 L 507,125 L 507,111 L 507,97 L 507,83 L 507,69 L 507,55 L 521,55 L 521,69 L 521,83 L 521,97 L 521,111 L 521,125 L 521,139 L 535,139 L 535,125 L 535,111 L 535,97 L 535,83 L 535,69 L 535,55 L 549,55 L 549,69 L 549,83 L 549,97 L 549,111 L 549,125 L 549,139 L 563,139 L 563,125 L 563,111 L 563,97 L 563,83 L 563,69 L 563,55 L 577,55 L 577,69 L 577,83 L 577,97 L 577,111 L 577,125 L 577,139 L 591,139 L 591,125 L 591,111 L 591,97 L 591,83 L 591,69 L 591,55 L 605,55 L 605,69 L 605,83 L 605,97 L 605,111 L 605,125 L 605,139 L 619,139 L 619,125 L 619,111 L 619,97 L 619,83 L 619,69 L 619,55 L 633,55 L 633,69 L 633,83 L 633,97 L 633,111 L 633,125 L 633,139 L 647,139 L 647,125 L 647,111 L 647,97 L 647,83 L 647,69 L 647,55 L 661,55 L 661,69 L 661,83 L 661,97 L 661,111 L 661,125 L 661,139 L 675,139 L 675,125 L 675,111 L 675,97 L 675,83 L 675,69 L 675,55 L 689,55 L 689,69 L 689,83 L 689,97 L 689,111 L 689,125 L 689,139 L 703,139 L 703,125 L 703,111 L 703,97 L 703,83 L 703,69 L 703,55 L 717,55 L 717,69 L 717,83 L 717,97 L 717,111 L 717,125 L 717,139 L 731,139 L 731,125 L 731,111 L 731,97 L 731,83 L 731,69 L 731,55 L 745,55 L 745,69 L 745,83 L 745,97 L 745,111 L 745,125 L 745,139 L 759,139 L 759,125 L 759,111 L 759,97 L 759,83 L 759,69 L 759,55 L 773,55 L 773,69 L 773,83 L 773,97 L 773,111 L 773,125 L 773,139" fill="none" stroke="none"/>
+    
+    <!-- Pac-Man -->
+    <g id="pacman" filter="url(#shadow)">
+        <animateMotion dur="29.68s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#motionPath"/>
+        </animateMotion>
+        
+        <!-- Body -->
+        <circle cx="0" cy="0" r="8" fill="url(#pacmanGradient)"/>
+        
+        <!-- Animated mouth -->
+        <g>
+            <path fill="#0d1117">
+                <animate attributeName="d" dur="0.15s" repeatCount="indefinite"
+                    values="M 0,0 L 8,3 L 8,-3 Z;
+                            M 0,0 L 8,1 L 8,-1 Z;
+                            M 0,0 L 8,3 L 8,-3 Z"/>
+            </path>
+        </g>
+        
+        <!-- Eye -->
+        <circle cx="-1" cy="-4" r="1.5" fill="#0d1117"/>
+    </g>
+    
+    <!-- Score display -->
     <g id="score">
-        <text x="780" y="25" fill="#ffffff" text-anchor="end" 
-              font-family="'Press Start 2P', 'Courier New', monospace" font-size="10">
-            SCORE: 13
+        <rect x="682" y="5" width="110" height="25" rx="5" fill="#30363d" opacity="0.8"/>
+        <text x="737" y="22" fill="#ffff00" text-anchor="middle" 
+              font-family="'Courier New', monospace" font-size="12" font-weight="bold">
+            SCORE: 1414
         </text>
     </g>
     
-    <!-- Power pellets (high contribution days) -->
-    <g id="powerPellets">
-        <circle cx="48" cy="51" r="6" fill="#ff0000" opacity="0.7">
-            <animate attributeName="opacity" dur="0.5s" values="0.7;1;0.7" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="60" cy="51" r="6" fill="#00ffff" opacity="0.7">
-            <animate attributeName="opacity" dur="0.5s" values="0.7;1;0.7" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="156" cy="51" r="6" fill="#ffb8ff" opacity="0.7">
-            <animate attributeName="opacity" dur="0.5s" values="0.7;1;0.7" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="180" cy="51" r="6" fill="#ffb852" opacity="0.7">
-            <animate attributeName="opacity" dur="0.5s" values="0.7;1;0.7" repeatCount="indefinite"/>
-        </circle>    </g>
+    <!-- Legend -->
+    <g transform="translate(662, 158)">
+        <text x="0" y="0" fill="#8b949e" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Less</text>
+        <rect x="30" y="-9" width="10" height="10" rx="2" fill="#161b22"/>
+        <rect x="44" y="-9" width="10" height="10" rx="2" fill="#0e4429"/>
+        <rect x="58" y="-9" width="10" height="10" rx="2" fill="#006d32"/>
+        <rect x="72" y="-9" width="10" height="10" rx="2" fill="#26a641"/>
+        <rect x="86" y="-9" width="10" height="10" rx="2" fill="#39d353"/>
+        <text x="105" y="0" fill="#8b949e" font-family="'Segoe UI', Arial, sans-serif" font-size="9">More</text>
+    </g>
 </svg>
