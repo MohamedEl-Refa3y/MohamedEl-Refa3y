@@ -3,6 +3,13 @@
 
 ---
 
+### 🎮 My Contributions
+<p align="center">
+  <img src="./dist/pacman.svg" alt="Pac-Man Contributions" width="100%"/>
+</p>
+
+---
+
 ### 🚀 About Me
 - 🔭 Currently working on **Driven LLM Automation & RAG systems**
 - 🌱 Learning **Mathematics for ML/DL**
