@@ -3,7 +3,7 @@
 Terminal Typing Animation Generator
 
 Generates an animated SVG that simulates terminal typing effect
-with light green text, blinking cursor, and loop with clear screen.
+with light green text, blinking cursor, and persistent final message.
 """
 
 import os
@@ -18,7 +18,7 @@ CURSOR_COLOR = "#39d353"
 # Animation timing
 CHAR_DURATION = 0.05  # 50ms per character
 LINE_PAUSE = 0.75  # 0.75 seconds pause after each line
-CLEAR_DURATION = 0.5  # Clear screen fade duration
+FADE_IN_DURATION = 1.0  # Final message fade in duration
 
 # Font settings
 FONT_FAMILY = "'Courier New', Consolas, 'Liberation Mono', monospace"
@@ -35,96 +35,62 @@ LINES = [
     "  [+] Orchestrating Multi-Agent Workflows",
     "  [+] GenAI System Design & Optimization",
     "  [+] Deep Learning Research & Development",
-    "",
-    "> Status: turning_innovation_into_reality..."
 ]
 
 FINAL_MSG = "Feel free to reach out through any of the channels below , I am pleased to help"
+STATUS_LINE = "> Status: turning_innovation_into_reality..."
 
 def generate_svg() -> str:
     """Generate the terminal typing animation SVG."""
     
-    # Calculate dimensions
-    max_chars = max(len(line) for line in LINES)
-    # Ensure width is enough for the final message (~80 chars)
-    width = max(max_chars * 11 + 60, 900)  
-    height = len(LINES) * LINE_HEIGHT + 60
+    # Calculate dimensions - add extra space for final message and status
+    max_chars = max(len(line) for line in LINES + [FINAL_MSG, STATUS_LINE])
+    width = max(max_chars * 11 + 60, 800)  # Approximate character width
+    height = (len(LINES) + 4) * LINE_HEIGHT + 60  # Extra space for final message and status
     
-    # Calculate animations
+    # Build character animations
+    animations = []
     current_time = 0.5  # Start after 0.5s
-    
-    # Separate animations for main text (fades out) and status line (stays)
-    main_text_animations = []
-    status_text_animations = []
-    
-    cursor_keyframes = []
-    cursor_time = 0.5
     
     for line_idx, line in enumerate(LINES):
         y_pos = 40 + line_idx * LINE_HEIGHT
-        is_last_line = (line_idx == len(LINES) - 1)
         
         if not line:  # Empty line
             current_time += LINE_PAUSE
-            cursor_time += LINE_PAUSE
             continue
         
-        # Character animations
         for char_idx, char in enumerate(line):
             x_pos = 30 + char_idx * 10.5  # Approximate monospace width
             char_time = current_time + char_idx * CHAR_DURATION
             
             # Escape special characters for SVG
             if char == '<':
-                char_esc = '&lt;'
+                char = '&lt;'
             elif char == '>':
-                char_esc = '&gt;'
+                char = '&gt;'
             elif char == '&':
-                char_esc = '&amp;'
+                char = '&amp;'
             elif char == '"':
-                char_esc = '&quot;'
-            else:
-                char_esc = char
+                char = '&quot;'
             
-            anim = {
-                'char': char_esc,
+            animations.append({
+                'char': char,
                 'x': x_pos,
                 'y': y_pos,
-                'begin': char_time
-            }
-            
-            if is_last_line:
-                status_text_animations.append(anim)
-            else:
-                main_text_animations.append(anim)
-            
-            # Cursor keyframes matching character position
-            cursor_keyframes.append({
-                'x': x_pos + 10.5, # Cursor after character
-                'y': y_pos,
-                'time': char_time
+                'begin': char_time,
+                'line_idx': line_idx,
+                'char_idx': char_idx
             })
-            
-        current_time += len(line) * CHAR_DURATION + LINE_PAUSE
-        cursor_time = current_time # Sync cursor time
         
-        # Add a keyframe for cursor at the end of the line (during the pause)
-        if cursor_keyframes:
-             cursor_keyframes.append({
-                'x': cursor_keyframes[-1]['x'],
-                'y': cursor_keyframes[-1]['y'],
-                'time': cursor_time
-            })
-
+        current_time += len(line) * CHAR_DURATION + LINE_PAUSE
     
     typing_end_time = current_time
-    fade_out_start = typing_end_time
-    fade_out_end = fade_out_start + CLEAR_DURATION
-    final_msg_start = fade_out_end + 0.5
+    cursor_fade_time = typing_end_time + 0.5
+    final_msg_start = typing_end_time + 1.0
     
-    # Total duration for the cursor animation definition
-    # We extend it to cover the fade out/in transition so cursor stays in place
-    total_duration = final_msg_start + 1.0 
+    # Calculate positions for final message and status (centered below the typed text)
+    final_msg_y = 40 + (len(LINES) + 2) * LINE_HEIGHT
+    status_y = final_msg_y + LINE_HEIGHT + 5
     
     # Build SVG
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}">
@@ -133,23 +99,23 @@ def generate_svg() -> str:
             0%, 50% {{ opacity: 1; }}
             51%, 100% {{ opacity: 0; }}
         }}
-        @keyframes fadeOut {{
-            0% {{ opacity: 1; }}
-            100% {{ opacity: 0; }}
-        }}
         @keyframes fadeIn {{
             0% {{ opacity: 0; }}
             100% {{ opacity: 1; }}
         }}
+        @keyframes fadeOut {{
+            0% {{ opacity: 0.8; }}
+            100% {{ opacity: 0; }}
+        }}
         .cursor {{
             animation: blink 1s infinite;
         }}
-        .main-text-container {{
-            animation: fadeOut {CLEAR_DURATION}s ease-in-out {fade_out_start}s forwards;
+        .cursor-fade {{
+            animation: fadeOut 0.5s ease-in-out {cursor_fade_time}s forwards;
         }}
         .final-msg {{
             opacity: 0;
-            animation: fadeIn 1s ease-in-out {final_msg_start}s forwards;
+            animation: fadeIn {FADE_IN_DURATION}s ease-in-out {final_msg_start}s forwards;
         }}
     </style>
     
@@ -164,15 +130,14 @@ def generate_svg() -> str:
     <circle cx="48" cy="22" r="5" fill="#ffbd2e"/>
     <circle cx="68" cy="22" r="5" fill="#27c93f"/>
     
-    <!-- Main text (fades out) -->
-    <g class="main-text-container" transform="translate(10, 25)">
+    <g class="text-container" transform="translate(10, 25)">
 '''
 
-    # Add main text characters
-    for anim in main_text_animations:
+    # Add each character with its animation
+    for anim in animations:
         char = anim['char']
         if char.strip() == '':
-            char = '&#160;'
+            char = '&#160;'  # Non-breaking space
         
         svg += f'''        <text x="{anim['x']}" y="{anim['y']}" 
               fill="{TEXT_COLOR}" font-family="{FONT_FAMILY}" font-size="{FONT_SIZE}"
@@ -182,67 +147,62 @@ def generate_svg() -> str:
                      begin="{anim['begin']:.2f}s" dur="0.01s" fill="freeze"/>
         </text>
 '''
-    svg += '    </g>\n'
+
+    # Add blinking cursor that follows the typing
+    cursor_keyframes = []
+    cursor_time = 0.5
     
-    # Status text (persistent)
-    svg += '    <g class="status-text-container" transform="translate(10, 25)">\n'
-    for anim in status_text_animations:
-        char = anim['char']
-        if char.strip() == '':
-            char = '&#160;'
+    for line_idx, line in enumerate(LINES):
+        if not line:
+            cursor_time += LINE_PAUSE
+            continue
+            
+        y_pos = 40 + line_idx * LINE_HEIGHT
         
-        svg += f'''        <text x="{anim['x']}" y="{anim['y']}" 
-              fill="{TEXT_COLOR}" font-family="{FONT_FAMILY}" font-size="{FONT_SIZE}"
-              opacity="0">
-            {char}
-            <animate attributeName="opacity" from="0" to="1" 
-                     begin="{anim['begin']:.2f}s" dur="0.01s" fill="freeze"/>
-        </text>
-'''
-    svg += '    </g>\n'
+        for char_idx in range(len(line) + 1):
+            x_pos = 30 + char_idx * 10.5
+            cursor_keyframes.append({
+                'x': x_pos,
+                'y': y_pos,
+                'time': cursor_time
+            })
+            if char_idx < len(line):
+                cursor_time += CHAR_DURATION
+        
+        cursor_time += LINE_PAUSE
+        
+    # Keep cursor at the end until it fades
+    cursor_keyframes.append({
+        'x': cursor_keyframes[-1]['x'],
+        'y': cursor_keyframes[-1]['y'],
+        'time': typing_end_time
+    })
 
-    # Cursor
-    # Normalize cursor times to 0-1 range for keyTimes
-    # We extend the last keyframe to total_duration to keep it visible
-    if cursor_keyframes:
-        last_kf = cursor_keyframes[-1]
-        cursor_keyframes.append({
-            'x': last_kf['x'],
-            'y': last_kf['y'],
-            'time': total_duration # Stay until end
-        })
-        
+    # Build cursor position animations
     cursor_x_values = ";".join([str(kf['x']) for kf in cursor_keyframes])
     cursor_y_values = ";".join([str(kf['y']) for kf in cursor_keyframes])
-    cursor_times = ";".join([f"{kf['time'] / total_duration:.4f}" for kf in cursor_keyframes])
+    cursor_times = ";".join([f"{kf['time'] / typing_end_time:.4f}" for kf in cursor_keyframes])
     
     svg += f'''
-    <g transform="translate(10, 25)">
         <!-- Blinking cursor -->
-        <rect class="cursor" width="10" height="{FONT_SIZE + 2}" fill="{CURSOR_COLOR}" opacity="0.8">
+        <rect class="cursor cursor-fade" width="10" height="{FONT_SIZE + 2}" fill="{CURSOR_COLOR}" opacity="0.8">
             <animate attributeName="x" values="{cursor_x_values}" 
-                     keyTimes="{cursor_times}" dur="{total_duration}s" fill="freeze"/>
+                     keyTimes="{cursor_times}" dur="{typing_end_time}s" fill="freeze"/>
             <animate attributeName="y" values="{cursor_y_values}" 
-                     keyTimes="{cursor_times}" dur="{total_duration}s" fill="freeze"/>
+                     keyTimes="{cursor_times}" dur="{typing_end_time}s" fill="freeze"/>
             <animate attributeName="opacity" from="0" to="0.8" begin="0.5s" dur="0.01s" fill="freeze"/>
         </rect>
-    </g>
-'''
-    
-    # Final Message Centered
-    # We place it in the center of the available space (roughly)
-    # Since main text faded out, we have the upper area free.
-    # The status line is at the bottom.
-    # Center Y approx: (height - status_line_height) / 2
-    # But using 50% is easier, just need to make sure it doesn't overlap status line if screen is small.
-    # With fixed height based on lines, 50% should be fine as status is at bottom.
-    
-    svg += f'''
-    <!-- Final Message Centered -->
-    <g class="final-msg">
-        <text x="50%" y="40%" text-anchor="middle" dominant-baseline="middle"
+        
+        <!-- Final Message -->
+        <text class="final-msg" x="30" y="{final_msg_y}"
               fill="{TEXT_COLOR}" font-family="{FONT_FAMILY}" font-size="{FONT_SIZE}">
             {FINAL_MSG}
+        </text>
+        
+        <!-- Status Line -->
+        <text class="final-msg" x="30" y="{status_y}"
+              fill="{TEXT_COLOR}" font-family="{FONT_FAMILY}" font-size="{FONT_SIZE}">
+            {STATUS_LINE}
         </text>
     </g>
              
