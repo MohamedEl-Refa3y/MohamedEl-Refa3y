@@ -29,7 +29,7 @@ DAYS_IN_WEEK = 7
 # Layout - Match GitHub exactly
 MARGIN_TOP = 40
 MARGIN_LEFT = 40
-MARGIN_RIGHT = 20
+MARGIN_RIGHT = 50
 MARGIN_BOTTOM = 35
 
 # Colors - GitHub dark theme exact colors
