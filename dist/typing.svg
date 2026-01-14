@@ -962,7 +962,7 @@
         <text x="61.5" y="152" 
               fill="#39d353" font-family="'Courier New', Consolas, 'Liberation Mono', monospace" font-size="18"
               opacity="0">
-            ✔
+            +
             <animate attributeName="opacity" from="0" to="1" 
                      begin="15.15s" dur="0.01s" fill="freeze"/>
         </text>
@@ -1298,7 +1298,7 @@
         <text x="61.5" y="180" 
               fill="#39d353" font-family="'Courier New', Consolas, 'Liberation Mono', monospace" font-size="18"
               opacity="0">
-            ✔
+            +
             <animate attributeName="opacity" from="0" to="1" 
                      begin="19.55s" dur="0.01s" fill="freeze"/>
         </text>
@@ -1585,7 +1585,7 @@
         <text x="61.5" y="208" 
               fill="#39d353" font-family="'Courier New', Consolas, 'Liberation Mono', monospace" font-size="18"
               opacity="0">
-            ✔
+            +
             <animate attributeName="opacity" from="0" to="1" 
                      begin="23.60s" dur="0.01s" fill="freeze"/>
         </text>
@@ -1865,7 +1865,7 @@
         <text x="61.5" y="236" 
               fill="#39d353" font-family="'Courier New', Consolas, 'Liberation Mono', monospace" font-size="18"
               opacity="0">
-            ✔
+            +
             <animate attributeName="opacity" from="0" to="1" 
                      begin="27.60s" dur="0.01s" fill="freeze"/>
         </text>
