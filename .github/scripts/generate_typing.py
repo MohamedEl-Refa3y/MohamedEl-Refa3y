@@ -31,12 +31,12 @@ LINES = [
     "> Role: AI Developer @ Hail Emirate (Innovation & AI Dept)",
     "",
     "> Loading Production Modules...",
-    "  [✔] Advanced RAG & Vector Search Architectures",
-    "  [✔] Orchestrating Multi-Agent Workflows",
-    "  [✔] GenAI System Design & Optimization",
-    "  [✔] Deep Learning Research & Development",
+    "  [+] Advanced RAG & Vector Search Architectures",
+    "  [+] Orchestrating Multi-Agent Workflows",
+    "  [+] GenAI System Design & Optimization",
+    "  [+] Deep Learning Research & Development",
     "",
-    "> Status: turning_innovation_into_reality...",
+    "> Status: turning_innovation_into_reality..."
 ]
 
 
