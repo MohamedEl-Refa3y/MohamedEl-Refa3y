@@ -17,7 +17,7 @@ CURSOR_COLOR = "#39d353"
 
 # Animation timing
 CHAR_DURATION = 0.05  # 50ms per character
-LINE_PAUSE = 2.0  # 2 seconds pause after each line
+LINE_PAUSE = 0.75  # 0.75 seconds pause after each line
 CLEAR_DURATION = 0.5  # Clear screen fade duration
 
 # Font settings
