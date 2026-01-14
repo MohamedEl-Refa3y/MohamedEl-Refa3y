@@ -376,7 +376,7 @@ def generate_svg(contributions_data: Dict) -> str:
     <g fill="{TEXT_COLOR}" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">
         <text x="{MARGIN_LEFT - 28}" y="{MARGIN_TOP + 1 * (CELL_SIZE + CELL_GAP) + 9}">Mon</text>
         <text x="{MARGIN_LEFT - 28}" y="{MARGIN_TOP + 3 * (CELL_SIZE + CELL_GAP) + 9}">Wed</text>
-        <text x="{MARGIN_LEFT - 28}" y="{MARGIN_LEFT + 5 * (CELL_SIZE + CELL_GAP) + 9}">Fri</text>
+        <text x="{MARGIN_LEFT - 28}" y="{MARGIN_TOP + 5 * (CELL_SIZE + CELL_GAP) + 9}">Fri</text>
     </g>
     
     <!-- Contribution cells -->
@@ -468,7 +468,7 @@ def generate_svg(contributions_data: Dict) -> str:
     </use>'''
     
     # Legend (Less -> More) - GitHub style
-    legend_x = width - 120
+    legend_x = width - 140
     legend_y = height - 18
     svg += f'''
     
