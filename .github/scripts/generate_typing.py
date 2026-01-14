@@ -39,6 +39,7 @@ LINES = [
     "> Status: turning_innovation_into_reality..."
 ]
 
+FINAL_MSG = "Feel free to reach out through any of the channels below , I am pleased to help"
 
 def generate_svg() -> str:
     """Generate the terminal typing animation SVG."""
@@ -49,10 +50,7 @@ def generate_svg() -> str:
     height = len(LINES) * LINE_HEIGHT + 60
     
     # Calculate total animation duration
-    total_chars = sum(len(line) for line in LINES)
-    typing_time = total_chars * CHAR_DURATION
-    pause_time = len(LINES) * LINE_PAUSE
-    total_duration = typing_time + pause_time + CLEAR_DURATION + 1  # +1 for buffer
+    # We need to calculate exact timing for each character to know when typing ends
     
     # Build character animations
     animations = []
@@ -90,6 +88,11 @@ def generate_svg() -> str:
         
         current_time += len(line) * CHAR_DURATION + LINE_PAUSE
     
+    typing_end_time = current_time
+    fade_out_start = typing_end_time
+    fade_out_end = fade_out_start + CLEAR_DURATION
+    final_msg_start = fade_out_end + 0.5
+    
     # Build SVG
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}">
     <style>
@@ -101,11 +104,19 @@ def generate_svg() -> str:
             0% {{ opacity: 1; }}
             100% {{ opacity: 0; }}
         }}
+        @keyframes fadeIn {{
+            0% {{ opacity: 0; }}
+            100% {{ opacity: 1; }}
+        }}
         .cursor {{
             animation: blink 1s infinite;
         }}
         .text-container {{
-            animation: fadeOut 0.5s ease-in-out {total_duration - 0.5}s forwards;
+            animation: fadeOut {CLEAR_DURATION}s ease-in-out {fade_out_start}s forwards;
+        }}
+        .final-msg {{
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out {final_msg_start}s forwards;
         }}
     </style>
     
@@ -139,6 +150,7 @@ def generate_svg() -> str:
 '''
 
     # Add blinking cursor that follows the typing
+    # The cursor should also fade out with the text container
     cursor_keyframes = []
     cursor_time = 0.5
     
@@ -160,26 +172,41 @@ def generate_svg() -> str:
                 cursor_time += CHAR_DURATION
         
         cursor_time += LINE_PAUSE
+        
+    # Keep cursor at the end until fade out
+    cursor_keyframes.append({
+        'x': cursor_keyframes[-1]['x'],
+        'y': cursor_keyframes[-1]['y'],
+        'time': fade_out_start
+    })
 
     # Build cursor position animations
+    # We need to normalize times to 0-1 range based on a duration
+    # Since we can't easily use keyPoints/keyTimes with variable duration without total_duration
+    # We'll use values and keyTimes with the fade_out_start as duration for the cursor movement part
+    
     cursor_x_values = ";".join([str(kf['x']) for kf in cursor_keyframes])
     cursor_y_values = ";".join([str(kf['y']) for kf in cursor_keyframes])
-    cursor_times = ";".join([f"{kf['time'] / total_duration:.4f}" for kf in cursor_keyframes])
+    cursor_times = ";".join([f"{kf['time'] / fade_out_start:.4f}" for kf in cursor_keyframes])
     
     svg += f'''
         <!-- Blinking cursor -->
         <rect class="cursor" width="10" height="{FONT_SIZE + 2}" fill="{CURSOR_COLOR}" opacity="0.8">
             <animate attributeName="x" values="{cursor_x_values}" 
-                     keyTimes="{cursor_times}" dur="{total_duration}s" fill="freeze"/>
+                     keyTimes="{cursor_times}" dur="{fade_out_start}s" fill="freeze"/>
             <animate attributeName="y" values="{cursor_y_values}" 
-                     keyTimes="{cursor_times}" dur="{total_duration}s" fill="freeze"/>
+                     keyTimes="{cursor_times}" dur="{fade_out_start}s" fill="freeze"/>
             <animate attributeName="opacity" from="0" to="0.8" begin="0.5s" dur="0.01s" fill="freeze"/>
         </rect>
     </g>
     
-    <!-- Restart animation by refreshing the SVG -->
-    <animate attributeName="visibility" begin="{total_duration}s" dur="0.01s" 
-             values="visible;visible" repeatCount="indefinite"/>
+    <!-- Final Message Centered -->
+    <g class="final-msg">
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
+              fill="{TEXT_COLOR}" font-family="{FONT_FAMILY}" font-size="{FONT_SIZE}">
+            {FINAL_MSG}
+        </text>
+    </g>
              
 </svg>'''
 
