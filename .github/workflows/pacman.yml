@@ -1,4 +1,4 @@
-name: Generate Pac-Man Contributions
+name: Generate Profile Animations
 
 on:
   schedule:
@@ -29,6 +29,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
+      - name: Generate Typing Animation SVG
+        run: |
+          python .github/scripts/generate_typing.py
+      
       - name: Generate Pac-Man SVG
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
@@ -40,6 +44,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add dist/pacman.svg
-          git diff --staged --quiet || git commit -m "Update Pac-Man contributions animation"
+          git add dist/typing.svg dist/pacman.svg
+          git diff --staged --quiet || git commit -m "Update profile animations"
           git push

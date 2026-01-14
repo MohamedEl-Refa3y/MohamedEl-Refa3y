@@ -1,14 +1,6 @@
-<h1 align="center">Hi 👋, I'm Mohamed Elrefaay</h1>
-<h3 align="center">🤖 AI Developer | Automation Enthusiast</h3>
-
----
-
-### 🚀 About Me
-- 🔭 Currently working on **Driven LLM Automation & RAG systems**
-- 🌱 Learning **Mathematics for ML/DL**
-- 👯 Open to collaborate on **private or enterprise AI projects**
-- 💬 Ask me about **RAG systems, Agentic workflows, and ML deployment**
-- 📫 Reach me at **mohamedelrefaai45@gmail.com**
+<p align="center">
+  <img src="./dist/typing.svg" alt="Typing Animation" width="100%"/>
+</p>
 
 ---
 
