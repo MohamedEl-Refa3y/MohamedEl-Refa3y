@@ -22,6 +22,4 @@
   <img src="./dist/pacman.svg" alt="Pac-Man Contributions" width="100%"/>
 </p>
 
----
-### ⚡ Fun Fact
-I love turning complex AI workflows into automated, deployable solutions that actually work in production 🚀  
+
