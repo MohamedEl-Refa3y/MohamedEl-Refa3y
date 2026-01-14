@@ -27,14 +27,16 @@ LINE_HEIGHT = 28
 
 # Lines to type
 LINES = [
-    "> Hi, I'm Mohamed Elrefaay",
-    "> AI Developer | Automation Enthusiast",
+    "> Initializing Profile: Mohamed Elrefaay_",
+    "> Role: AI Developer @ Hail Emirate (Innovation & AI Dept)",
     "",
-    "> About Me",
-    "  - Currently working on Driven LLM Automation & RAG systems",
-    "  - Learning Mathematics for ML/DL",
-    "  - Open to collaborate on private or enterprise AI projects",
-    "  - Ask me about RAG systems, Agentic workflows, and ML deployment",
+    "> Loading Production Modules...",
+    "  [✔] Advanced RAG & Vector Search Architectures",
+    "  [✔] Orchestrating Multi-Agent Workflows",
+    "  [✔] GenAI System Design & Optimization",
+    "  [✔] Deep Learning Research & Development",
+    "",
+    "> Status: turning_innovation_into_reality...",
 ]
 
 
