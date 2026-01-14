@@ -18,6 +18,7 @@ CURSOR_COLOR = "#39d353"
 # Animation timing
 CHAR_DURATION = 0.05  # 50ms per character
 LINE_PAUSE = 0.75  # 0.75 seconds pause after each line
+CLEAR_DURATION = 0.5  # Clear screen fade duration
 FADE_IN_DURATION = 1.0  # Final message fade in duration
 
 # Font settings
@@ -37,16 +38,16 @@ LINES = [
     "  [+] Deep Learning Research & Development",
 ]
 
-FINAL_MSG = "Feel free to reach out through any of the channels below , I am pleased to help"
 STATUS_LINE = "> Status: turning_innovation_into_reality..."
+FINAL_MSG = "Feel free to reach out through any of the channels below , I am pleased to help"
 
 def generate_svg() -> str:
     """Generate the terminal typing animation SVG."""
     
-    # Calculate dimensions - add extra space for final message and status
+    # Calculate dimensions
     max_chars = max(len(line) for line in LINES + [FINAL_MSG, STATUS_LINE])
     width = max(max_chars * 11 + 60, 800)  # Approximate character width
-    height = (len(LINES) + 4) * LINE_HEIGHT + 60  # Extra space for final message and status
+    height = len(LINES) * LINE_HEIGHT + 60
     
     # Build character animations
     animations = []
@@ -85,12 +86,14 @@ def generate_svg() -> str:
         current_time += len(line) * CHAR_DURATION + LINE_PAUSE
     
     typing_end_time = current_time
-    cursor_fade_time = typing_end_time + 0.5
-    final_msg_start = typing_end_time + 1.0
+    fade_out_start = typing_end_time + 0.5
+    fade_out_end = fade_out_start + CLEAR_DURATION
+    final_screen_start = fade_out_end + 0.5
     
-    # Calculate positions for final message and status (centered below the typed text)
-    final_msg_y = 40 + (len(LINES) + 2) * LINE_HEIGHT
-    status_y = final_msg_y + LINE_HEIGHT + 5
+    # Calculate centered positions for final screen
+    center_y = height // 2 - LINE_HEIGHT
+    status_y = center_y
+    final_msg_y = center_y + LINE_HEIGHT + 5
     
     # Build SVG
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}">
@@ -104,6 +107,10 @@ def generate_svg() -> str:
             100% {{ opacity: 1; }}
         }}
         @keyframes fadeOut {{
+            0% {{ opacity: 1; }}
+            100% {{ opacity: 0; }}
+        }}
+        @keyframes cursorFadeOut {{
             0% {{ opacity: 0.8; }}
             100% {{ opacity: 0; }}
         }}
@@ -111,11 +118,14 @@ def generate_svg() -> str:
             animation: blink 1s infinite;
         }}
         .cursor-fade {{
-            animation: fadeOut 0.5s ease-in-out {cursor_fade_time}s forwards;
+            animation: cursorFadeOut 0.5s ease-in-out {fade_out_start}s forwards;
         }}
-        .final-msg {{
+        .text-container {{
+            animation: fadeOut {CLEAR_DURATION}s ease-in-out {fade_out_start}s forwards;
+        }}
+        .final-screen {{
             opacity: 0;
-            animation: fadeIn {FADE_IN_DURATION}s ease-in-out {final_msg_start}s forwards;
+            animation: fadeIn {FADE_IN_DURATION}s ease-in-out {final_screen_start}s forwards;
         }}
     </style>
     
@@ -192,17 +202,20 @@ def generate_svg() -> str:
                      keyTimes="{cursor_times}" dur="{typing_end_time}s" fill="freeze"/>
             <animate attributeName="opacity" from="0" to="0.8" begin="0.5s" dur="0.01s" fill="freeze"/>
         </rect>
-        
-        <!-- Final Message -->
-        <text class="final-msg" x="30" y="{final_msg_y}"
-              fill="{TEXT_COLOR}" font-family="{FONT_FAMILY}" font-size="{FONT_SIZE}">
-            {FINAL_MSG}
-        </text>
-        
+    </g>
+    
+    <!-- Final Screen - Centered -->
+    <g class="final-screen" transform="translate(10, 25)">
         <!-- Status Line -->
-        <text class="final-msg" x="30" y="{status_y}"
+        <text x="30" y="{status_y}"
               fill="{TEXT_COLOR}" font-family="{FONT_FAMILY}" font-size="{FONT_SIZE}">
             {STATUS_LINE}
+        </text>
+        
+        <!-- Final Message -->
+        <text x="30" y="{final_msg_y}"
+              fill="{TEXT_COLOR}" font-family="{FONT_FAMILY}" font-size="{FONT_SIZE}">
+            {FINAL_MSG}
         </text>
     </g>
              
