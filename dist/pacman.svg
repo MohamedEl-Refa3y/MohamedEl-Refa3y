@@ -44,7 +44,7 @@
     <text x="40" y="18" fill="#e6edf3" 
           font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" 
           font-size="14" font-weight="400">
-        245 contributions in the last year
+        246 contributions in the last year
     </text>
     
     <!-- Month labels -->
@@ -420,13 +420,13 @@
                      from="2.3" to="0" fill="freeze"/>
         </circle>
         <rect x="768" y="82" width="11" height="11" 
-              rx="2" ry="2" fill="#006d32"/>
-        <circle cx="773" cy="87" r="2.3" fill="#ffff00" 
+              rx="2" ry="2" fill="#26a641"/>
+        <circle cx="773" cy="87" r="2.7" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
             <animate attributeName="opacity" begin="31.80s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
             <animate attributeName="r" begin="31.80s" dur="0.1s" 
-                     from="2.3" to="0" fill="freeze"/>
+                     from="2.7" to="0" fill="freeze"/>
         </circle>
         <rect x="754" y="82" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
