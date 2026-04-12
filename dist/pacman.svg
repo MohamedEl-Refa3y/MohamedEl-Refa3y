@@ -50,18 +50,18 @@
     <!-- Month labels -->
     <g fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10">
         <text x="40" y="32">Apr</text>
-        <text x="96" y="32">May</text>
-        <text x="152" y="32">Jun</text>
-        <text x="222" y="32">Jul</text>
-        <text x="278" y="32">Aug</text>
-        <text x="348" y="32">Sep</text>
-        <text x="404" y="32">Oct</text>
-        <text x="460" y="32">Nov</text>
-        <text x="530" y="32">Dec</text>
-        <text x="586" y="32">Jan</text>
-        <text x="642" y="32">Feb</text>
-        <text x="698" y="32">Mar</text>
-        <text x="768" y="32">Apr</text>
+        <text x="82" y="32">May</text>
+        <text x="138" y="32">Jun</text>
+        <text x="208" y="32">Jul</text>
+        <text x="264" y="32">Aug</text>
+        <text x="334" y="32">Sep</text>
+        <text x="390" y="32">Oct</text>
+        <text x="446" y="32">Nov</text>
+        <text x="516" y="32">Dec</text>
+        <text x="572" y="32">Jan</text>
+        <text x="628" y="32">Feb</text>
+        <text x="684" y="32">Mar</text>
+        <text x="754" y="32">Apr</text>
     </g>
     
     <!-- Day labels (Mon, Wed, Fri) - GitHub style -->
@@ -132,16 +132,16 @@
         <rect x="432" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="446" y="40" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="460" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#39d353"/>
-        <circle cx="465" cy="45" r="3.1" fill="#ffff00" 
+        <circle cx="451" cy="45" r="3.1" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="6.00s" dur="0.1s" 
+            <animate attributeName="opacity" begin="5.80s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="6.00s" dur="0.1s" 
+            <animate attributeName="r" begin="5.80s" dur="0.1s" 
                      from="3.1" to="0" fill="freeze"/>
         </circle>
+        <rect x="460" y="40" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="474" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="488" y="40" width="11" height="11" 
@@ -153,16 +153,16 @@
         <rect x="530" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="544" y="40" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="558" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#39d353"/>
-        <circle cx="563" cy="45" r="3.1" fill="#ffff00" 
+        <circle cx="549" cy="45" r="3.1" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="7.40s" dur="0.1s" 
+            <animate attributeName="opacity" begin="7.20s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="7.40s" dur="0.1s" 
+            <animate attributeName="r" begin="7.20s" dur="0.1s" 
                      from="3.1" to="0" fill="freeze"/>
         </circle>
+        <rect x="558" y="40" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="572" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="586" y="40" width="11" height="11" 
@@ -172,16 +172,16 @@
         <rect x="614" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="628" y="40" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="642" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#0e4429"/>
-        <circle cx="647" cy="45" r="1.9" fill="#ffff00" 
+        <circle cx="633" cy="45" r="1.9" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="8.60s" dur="0.1s" 
+            <animate attributeName="opacity" begin="8.40s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="8.60s" dur="0.1s" 
+            <animate attributeName="r" begin="8.40s" dur="0.1s" 
                      from="1.9" to="0" fill="freeze"/>
         </circle>
+        <rect x="642" y="40" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="656" y="40" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="670" y="40" width="11" height="11" 
@@ -219,16 +219,16 @@
         <rect x="656" y="54" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="642" y="54" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
+        <rect x="628" y="54" width="11" height="11" 
               rx="2" ry="2" fill="#0e4429"/>
-        <circle cx="647" cy="59" r="1.9" fill="#ffff00" 
+        <circle cx="633" cy="59" r="1.9" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="12.40s" dur="0.1s" 
+            <animate attributeName="opacity" begin="12.60s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="12.40s" dur="0.1s" 
+            <animate attributeName="r" begin="12.60s" dur="0.1s" 
                      from="1.9" to="0" fill="freeze"/>
         </circle>
-        <rect x="628" y="54" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
         <rect x="614" y="54" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="600" y="54" width="11" height="11" 
@@ -288,16 +288,16 @@
         <rect x="222" y="54" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="208" y="54" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
+        <rect x="194" y="54" width="11" height="11" 
               rx="2" ry="2" fill="#0e4429"/>
-        <circle cx="213" cy="59" r="1.9" fill="#ffff00" 
+        <circle cx="199" cy="59" r="1.9" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="18.60s" dur="0.1s" 
+            <animate attributeName="opacity" begin="18.80s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="18.60s" dur="0.1s" 
+            <animate attributeName="r" begin="18.80s" dur="0.1s" 
                      from="1.9" to="0" fill="freeze"/>
         </circle>
-        <rect x="194" y="54" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
         <rect x="180" y="54" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="166" y="54" width="11" height="11" 
@@ -399,16 +399,16 @@
         <rect x="572" y="68" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="586" y="68" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="600" y="68" width="11" height="11" 
               rx="2" ry="2" fill="#006d32"/>
-        <circle cx="605" cy="73" r="2.3" fill="#ffff00" 
+        <circle cx="591" cy="73" r="2.3" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="29.20s" dur="0.1s" 
+            <animate attributeName="opacity" begin="29.00s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="29.20s" dur="0.1s" 
+            <animate attributeName="r" begin="29.00s" dur="0.1s" 
                      from="2.3" to="0" fill="freeze"/>
         </circle>
+        <rect x="600" y="68" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="614" y="68" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="628" y="68" width="11" height="11" 
@@ -458,16 +458,16 @@
         <rect x="614" y="82" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="600" y="82" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
+        <rect x="586" y="82" width="11" height="11" 
               rx="2" ry="2" fill="#26a641"/>
-        <circle cx="605" cy="87" r="2.7" fill="#ffff00" 
+        <circle cx="591" cy="87" r="2.7" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="34.20s" dur="0.1s" 
+            <animate attributeName="opacity" begin="34.40s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="34.20s" dur="0.1s" 
+            <animate attributeName="r" begin="34.40s" dur="0.1s" 
                      from="2.7" to="0" fill="freeze"/>
         </circle>
-        <rect x="586" y="82" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
         <rect x="572" y="82" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="558" y="82" width="11" height="11" 
@@ -475,16 +475,16 @@
         <rect x="544" y="82" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="530" y="82" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
+        <rect x="516" y="82" width="11" height="11" 
               rx="2" ry="2" fill="#0e4429"/>
-        <circle cx="535" cy="87" r="1.9" fill="#ffff00" 
+        <circle cx="521" cy="87" r="1.9" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="35.20s" dur="0.1s" 
+            <animate attributeName="opacity" begin="35.40s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="35.20s" dur="0.1s" 
+            <animate attributeName="r" begin="35.40s" dur="0.1s" 
                      from="1.9" to="0" fill="freeze"/>
         </circle>
-        <rect x="516" y="82" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
         <rect x="502" y="82" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="488" y="82" width="11" height="11" 
@@ -610,16 +610,16 @@
         <rect x="418" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="432" y="96" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="446" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#0e4429"/>
-        <circle cx="451" cy="101" r="1.9" fill="#ffff00" 
+        <circle cx="437" cy="101" r="1.9" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="48.20s" dur="0.1s" 
+            <animate attributeName="opacity" begin="48.00s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="48.20s" dur="0.1s" 
+            <animate attributeName="r" begin="48.00s" dur="0.1s" 
                      from="1.9" to="0" fill="freeze"/>
         </circle>
+        <rect x="446" y="96" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="460" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="474" y="96" width="11" height="11" 
@@ -631,29 +631,29 @@
         <rect x="516" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="530" y="96" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="544" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#39d353"/>
-        <circle cx="549" cy="101" r="3.1" fill="#ffff00" 
+        <circle cx="535" cy="101" r="3.1" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="49.60s" dur="0.1s" 
+            <animate attributeName="opacity" begin="49.40s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="49.60s" dur="0.1s" 
+            <animate attributeName="r" begin="49.40s" dur="0.1s" 
                      from="3.1" to="0" fill="freeze"/>
         </circle>
+        <rect x="544" y="96" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="558" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="572" y="96" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="586" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#39d353"/>
-        <circle cx="591" cy="101" r="3.1" fill="#ffff00" 
+        <circle cx="577" cy="101" r="3.1" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="50.20s" dur="0.1s" 
+            <animate attributeName="opacity" begin="50.00s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="50.20s" dur="0.1s" 
+            <animate attributeName="r" begin="50.00s" dur="0.1s" 
                      from="3.1" to="0" fill="freeze"/>
         </circle>
+        <rect x="586" y="96" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="600" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="614" y="96" width="11" height="11" 
@@ -675,31 +675,31 @@
         <rect x="726" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="740" y="96" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="754" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#0e4429"/>
-        <circle cx="759" cy="101" r="1.9" fill="#ffff00" 
+        <circle cx="745" cy="101" r="1.9" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="52.60s" dur="0.1s" 
+            <animate attributeName="opacity" begin="52.40s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="52.60s" dur="0.1s" 
+            <animate attributeName="r" begin="52.40s" dur="0.1s" 
                      from="1.9" to="0" fill="freeze"/>
         </circle>
+        <rect x="754" y="96" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="768" y="96" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="768" y="110" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="754" y="110" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
+        <rect x="740" y="110" width="11" height="11" 
               rx="2" ry="2" fill="#39d353"/>
-        <circle cx="759" cy="115" r="3.1" fill="#ffff00" 
+        <circle cx="745" cy="115" r="3.1" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="53.20s" dur="0.1s" 
+            <animate attributeName="opacity" begin="53.40s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="53.20s" dur="0.1s" 
+            <animate attributeName="r" begin="53.40s" dur="0.1s" 
                      from="3.1" to="0" fill="freeze"/>
         </circle>
-        <rect x="740" y="110" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
         <rect x="726" y="110" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="712" y="110" width="11" height="11" 
@@ -727,16 +727,16 @@
         <rect x="558" y="110" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="544" y="110" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
+        <rect x="530" y="110" width="11" height="11" 
               rx="2" ry="2" fill="#26a641"/>
-        <circle cx="549" cy="115" r="2.7" fill="#ffff00" 
+        <circle cx="535" cy="115" r="2.7" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="56.20s" dur="0.1s" 
+            <animate attributeName="opacity" begin="56.40s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="56.20s" dur="0.1s" 
+            <animate attributeName="r" begin="56.40s" dur="0.1s" 
                      from="2.7" to="0" fill="freeze"/>
         </circle>
-        <rect x="530" y="110" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
         <rect x="516" y="110" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="502" y="110" width="11" height="11" 
@@ -814,16 +814,16 @@
         <rect x="68" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="82" y="124" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="96" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#0e4429"/>
-        <circle cx="101" cy="129" r="1.9" fill="#ffff00" 
+        <circle cx="87" cy="129" r="1.9" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="64.40s" dur="0.1s" 
+            <animate attributeName="opacity" begin="64.20s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="64.40s" dur="0.1s" 
+            <animate attributeName="r" begin="64.20s" dur="0.1s" 
                      from="1.9" to="0" fill="freeze"/>
         </circle>
+        <rect x="96" y="124" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="110" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="124" y="124" width="11" height="11" 
@@ -885,16 +885,16 @@
         <rect x="516" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="530" y="124" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="544" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#26a641"/>
-        <circle cx="549" cy="129" r="2.7" fill="#ffff00" 
+        <circle cx="535" cy="129" r="2.7" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="70.80s" dur="0.1s" 
+            <animate attributeName="opacity" begin="70.60s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="70.80s" dur="0.1s" 
+            <animate attributeName="r" begin="70.60s" dur="0.1s" 
                      from="2.7" to="0" fill="freeze"/>
         </circle>
+        <rect x="544" y="124" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="558" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="572" y="124" width="11" height="11" 
@@ -922,16 +922,16 @@
         <rect x="726" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
         <rect x="740" y="124" width="11" height="11" 
-              rx="2" ry="2" fill="#161b22"/>
-        <rect x="754" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#0e4429"/>
-        <circle cx="759" cy="129" r="1.9" fill="#ffff00" 
+        <circle cx="745" cy="129" r="1.9" fill="#ffff00" 
                 opacity="0.9" filter="url(#glow)">
-            <animate attributeName="opacity" begin="73.80s" dur="0.1s" 
+            <animate attributeName="opacity" begin="73.60s" dur="0.1s" 
                      from="0.9" to="0" fill="freeze"/>
-            <animate attributeName="r" begin="73.80s" dur="0.1s" 
+            <animate attributeName="r" begin="73.60s" dur="0.1s" 
                      from="1.9" to="0" fill="freeze"/>
         </circle>
+        <rect x="754" y="124" width="11" height="11" 
+              rx="2" ry="2" fill="#161b22"/>
         <rect x="768" y="124" width="11" height="11" 
               rx="2" ry="2" fill="#161b22"/>
     </g>
